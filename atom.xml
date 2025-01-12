@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Planet TVL</title>
+  <link href="https::/planet.tvl.fyi"/>
+  <updated>2025-01-12T11:17:12Z</updated>
+  <id>https::/planet.tvl.fyi</id>
+  <generator uri="https:&#x2F;&#x2F;github.com&#x2F;thkoch2001&#x2F;planet-mars" version="0.1.0">
+    planet-mars by Thomas Koch &lt;thomas@koch.ro&gt;
+  </generator>
+  <icon>https://planet.tvl.fyi/logo.svg</icon>
+
+  
+    <entry>
+      <id>https://tech.j4m3s.eu/posts/minimal-jre-nixos//planet.tvl.fyi</id>
+      <title>7x JVM Reduction: Nix Your Way to Lighter Docker Images</title>
+      
+        <link href="https://tech.j4m3s.eu/posts/minimal-jre-nixos/" />
+      
+      
+        <updated>2025-01-11T11:14:00Z</updated>
+      
+      
+        <published>2025-01-11T11:14:00Z</published>
+      
+      <summary>
+          Reducing by 7x the size of the JVM for fun and profit
+        </summary>
+      
+      </entry>
+  
+    <entry>
+      <id>3be72282-18aa-40c6-31d-2e9b66f9a39e/planet.tvl.fyi</id>
+      <title>Building Ultra Long Range TOSLINK</title>
+      
+        <link href="https://blog.benjojo.co.uk/post/sfp-experiment-ultra-long-range-toslink" />
+      
+      
+        <updated>2025-01-07T12:24:27Z</updated>
+      
+      
+        <published>2025-01-07T12:24:27Z</published>
+      
+      <summary>
+          &lt;h1&gt;Building Ultra Long Range TOSLINK&lt;&#x2F;h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;blog.benjojo.co.uk&#x2F;asset&#x2F;FFyEvN2TXy&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;This post is a textual version of a talk I gave at &lt;a href=&quot;https:&#x2F;&#x2F;events.ccc.de&#x2F;congress&#x2F;2024&#x2F;infos&#x2F;startpage.html&quot;&gt;The 38th Chaos Computer Congress&lt;&#x2F;a&gt; at the end of 2018&lt;&#x2F;p&gt;
+        </summary>
+      
+        <author>
+          <name>author</name>
+          <email>ben@benjojo.co.uk</email>
+          </author>
+        <uri></uri>
+        
+      </entry>
+  
+    <entry>
+      <id>tag:chneukirchen@yahoo.de,2004-06:chris-blogs-x-20241224-152132/planet.tvl.fyi</id>
+      <title>Merry Christmas!</title>
+      
+        <link href="https://leahneukirchen.org/blog/archive/2024/12/merry-christmas.html" rel="alternate"/>
+      
+      
+        <updated>2024-12-24T15:21:32Z</updated>
+      
+      
+        <published>2024-12-24T15:21:32Z</published>
+      
+      
+        <author>
+          <name>Leah Neukirchen</name>
+          <email>leah@vuxu.org</email>
+          </author>
+        <uri>https://leahneukirchen.org/</uri>
+        
+      <content  >
+          &lt;p style=&quot;margin: 1em; font-weight: bold; text-align: center&quot;&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;leahneukirchen.org&#x2F;blog&#x2F;graphics&#x2F;xmas2024.gif&quot;
+     alt=&quot;Animated comic christmas tree with lights and  antlers&quot;&gt;
+&lt;&#x2F;p&gt;
+
+&lt;p style=&quot;margin: 1em; position: relative: top: 10px; font-size: 140%; font-weight: bold; text-align: center&quot;&gt;
+Frohe Weihnachten, ein schönes Fest, und einen guten Rutsch ins neue Jahr
+wünscht euch&lt;br&gt;Leah Neukirchen
+&lt;&#x2F;p&gt;
+
+&lt;p style=&quot;margin: 1em; font-size: 140%; font-weight: bold; text-align: center&quot;&gt;
+Merry Christmas and a Happy New Year!
+&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;small&gt;NP: Trembling Bells&amp;#8212;Willows Of Carbeth&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>tag:chneukirchen@yahoo.de,2004-06:chris-blogs-x-20241220-135145/planet.tvl.fyi</id>
+      <title>How to properly shut down a Linux system</title>
+      
+        <link href="https://leahneukirchen.org/blog/archive/2024/12/how-to-properly-shut-down-a-linux-system.html" rel="alternate"/>
+      
+      
+        <updated>2024-12-20T13:51:45Z</updated>
+      
+      
+        <published>2024-12-20T13:51:45Z</published>
+      
+      
+        <author>
+          <name>Leah Neukirchen</name>
+          <email>leah@vuxu.org</email>
+          </author>
+        <uri>https://leahneukirchen.org/</uri>
+        
+      <content  >
+          &lt;p&gt;In a previous post, I discussed &lt;a href=&quot;&#x2F;blog&#x2F;archive&#x2F;2022&#x2F;01&#x2F;how-to-check-you-re-in-the-initial-pid-namespace.html&quot;&gt;how you can determine that you are
+pid 1&lt;&#x2F;a&gt;,
+the init process, when the system is booting.  Today, we’ll consider
+the end of the init process: system shutdown.&lt;&#x2F;p&gt;
+&lt;p&gt;If you look into a book on Unix system administration, the classic way
+to manually turn off a Unix system contains a few steps:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Bring the system to single-user mode (&lt;code&gt;init 1&lt;&#x2F;code&gt; or &lt;code&gt;shutdown&lt;&#x2F;code&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;Unmount all filesystems except for &#x2F;.&lt;&#x2F;li&gt;
+&lt;li&gt;Remount the root file system read-only.&lt;&#x2F;li&gt;
+&lt;li&gt;Run &lt;code&gt;sync&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Turn off the system.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;What step 1 essentially does is is kill all processes (except for pid
+1), and spawn a new shell.  (Unix doesn’t have a concept of
+“single-user mode” in kernel space.)  This is necessary to orderly
+stop all daemons, kill all remaining user processes, and close open
+files that would stop step 2 from progressing.&lt;&#x2F;p&gt;
+&lt;p&gt;Step 3 is necessary to ensure the root file system is in a consistent
+state.  Since we cannot unmount it (we still use it!), remounting it
+read-only is the best available way to ensure consistency.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we flush buffers, and then it’s safe to turn off the machine.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, since this is
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leahneukirchen&#x2F;sabotage&#x2F;blob&#x2F;master&#x2F;KEEP&#x2F;etc&#x2F;rc.shutdown&quot;&gt;not&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leahneukirchen&#x2F;ignite&#x2F;blob&#x2F;master&#x2F;ignite&#x2F;etc&#x2F;runit&#x2F;3&quot;&gt;my&lt;&#x2F;a&gt;
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;void-linux&#x2F;void-runit&#x2F;tree&#x2F;master&#x2F;shutdown.d&quot;&gt;first&lt;&#x2F;a&gt;
+rodeo with writing custom init scripts, I’ve implemented these steps a bunch
+of times and found out some things which were not obvious.&lt;&#x2F;p&gt;
+&lt;p&gt;So let’s see how some of this works in detail.&lt;&#x2F;p&gt;
+&lt;h4&gt;Killing all processes&lt;&#x2F;h4&gt;
+&lt;p&gt;This sounds easy, but is tricky to get right.  If you are &lt;em&gt;not&lt;&#x2F;em&gt; pid 1,
+using &lt;code&gt;kill(-1, SIGTERM)&lt;&#x2F;code&gt; will send SIGTERM to all processes except for
+pid 1 &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;e84a3bf7f4aa669c05e3884497774148ac111468&#x2F;kernel&#x2F;signal.c#L1567&quot;&gt;and itself&lt;&#x2F;a&gt;
+(on Linux on the BSDs).  You should then send a SIGCONT to all processes, so
+stopped processes will wake up and handle the SIGTERM, too.  Then you
+usually wait a bit for their graceful shutdown and run &lt;code&gt;kill(-1, SIGKILL)&lt;&#x2F;code&gt;
+to kill the rest.  Only two processes, you and init, should
+remain.  The main problem with this is you don’t know when all
+processes have exited after the first kill, so there’s necessarily a
+delay.&lt;&#x2F;p&gt;
+&lt;p&gt;It is therefore better to let pid 1 do the killing and reaping.  Again
+we run &lt;code&gt;kill(-1, SIGTERM); kill(-1, SIGCONT)&lt;&#x2F;code&gt;, and then do the usual
+reaping an init process should do.  When &lt;code&gt;waitpid&lt;&#x2F;code&gt; fails with ECHILD,
+we know there’s no child left over.  Else, after some timeout, you fall
+back to sending SIGKILL to the rest, and reap again.&lt;&#x2F;p&gt;
+&lt;p&gt;(As a historical aside, Alan Cox &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.social&#x2F;@etchedpixels&#x2F;113631181839433174&quot;&gt;pointed
+out&lt;&#x2F;a&gt; that
+on Unix V7, wait(2) in pid 1 keeps waiting for itself, since the parent of pid 1
+is pid 1 itself.  However all contemporary systems deal with this fine.)&lt;&#x2F;p&gt;
+&lt;p&gt;In the real world, you still want a timeout here.  A process could
+be stuck in state &lt;code&gt;D&lt;&#x2F;code&gt; and not respond to SIGKILL either.  We still
+want to power down at some point and not lock up shutdown due to this.&lt;&#x2F;p&gt;
+&lt;h4&gt;Remounting the file system read-only&lt;&#x2F;h4&gt;
+&lt;p&gt;On Linux, you do this by calling &lt;code&gt;mount -o remount,ro &#x2F;&lt;&#x2F;code&gt;
+or the equivalent syscall &lt;code&gt;mount(&amp;quot;&#x2F;&amp;quot;, &amp;quot;&#x2F;&amp;quot;, &amp;quot;&amp;quot;, MS_REMOUNT | MS_RDONLY, &amp;quot;&amp;quot;)&lt;&#x2F;code&gt;.
+This can fail when the “file system is still in use” with error code
+EBUSY.&lt;&#x2F;p&gt;
+&lt;p&gt;I ran into this EBUSY error a few times before, and lately a lot
+during development, and I finally tried to track down why it happens.
+Usually, it’s caused by some process that still has a file handle
+open, but at this point of shutdown, there’s nothing running anymore
+except for our init itself, so how can that fail?&lt;&#x2F;p&gt;
+&lt;p&gt;At first I thought it was just some erratic behavior (race condition
+etc.), but then I realized I could trigger the error each time I
+updated init (which happens a lot when you are testing code…).
+However, when I didn’t update init, everything shutdown fine!&lt;&#x2F;p&gt;
+&lt;p&gt;Now, I update init in my testing VM like this:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;scp leah@10.0.2.2:prj&#x2F;...&#x2F;init &#x2F;bin&#x2F;init- &amp;amp;&amp;amp; mv &#x2F;bin&#x2F;init- &#x2F;bin&#x2F;init
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We can’t overwrite &lt;code&gt;&#x2F;bin&#x2F;init&lt;&#x2F;code&gt; directly, else we get ETXTBSY.  So we
+do the usual dance of atomically renaming the file into the
+destination, similar to how package managers do it.&lt;&#x2F;p&gt;
+&lt;p&gt;On an inode level, what does this do?  Overwriting the &lt;code&gt;&#x2F;bin&#x2F;init&lt;&#x2F;code&gt;
+file decrements the &lt;code&gt;st_nlink&lt;&#x2F;code&gt; field, usually to 0, which means the
+old file is deleted.  However, as the init binary is still running (of
+course), the inode is kept alive.  We can verify this:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;# stat -L &#x2F;proc&#x2F;1&#x2F;exe
+  File: &#x2F;proc&#x2F;1&#x2F;exe
+  Size: 193032    	Blocks: 384        IO Block: 4096   regular file
+Device: 8,1	Inode: 137195      Links: 0
+Access: (0755&#x2F;-rwxr-xr-x)  Uid: (    0&#x2F;    root)   Gid: (    0&#x2F;    root)
+Access: 2024-12-19 17:29:21.289000000 +0000
+Modify: 2024-12-19 17:29:21.302000000 +0000
+Change: 2024-12-20 15:18:14.480000000 +0000
+ Birth: 2024-12-19 17:29:21.289000000 +0000
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The link count is zero indeed.&lt;&#x2F;p&gt;
+&lt;p&gt;But this causes the file system &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;torvalds&#x2F;linux&#x2F;blob&#x2F;8faabc041a001140564f718dabe37753e88b37fa&#x2F;fs&#x2F;namespace.c#L710&quot;&gt;to stay busy&lt;&#x2F;a&gt;,
+since it wants to delete the file when it will be closed, so it cannot
+be remounted read-only while there are open file handles to deleted files!
+(Thanks to Simon Richter for &lt;a href=&quot;https:&#x2F;&#x2F;hachyderm.io&#x2F;@GyrosGeier&#x2F;113679452571992737&quot;&gt;explaining
+this&lt;&#x2F;a&gt;.)  This is
+also the reason for the occasional shutdown issues I had using
+&lt;code&gt;runit&lt;&#x2F;code&gt;—likely the &lt;code&gt;runit&lt;&#x2F;code&gt; binary was updated during the uptime.&lt;&#x2F;p&gt;
+&lt;p&gt;I tried many ways to work around this (old posts may suggest we can
+perhaps link &lt;code&gt;&#x2F;proc&#x2F;1&#x2F;exe&lt;&#x2F;code&gt; back into a file, but this behavior has been
+forbidden in Linux since 2011), but ultimately I think this is a
+policy problem and not one of pid 1 itself.  I therefore suggest a
+simple workaround that users of other init systems can use as well:
+in the startup scripts, after the root filesystem is mounted writable,
+we just make a backup link for the currently booted init:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;ln -f &#x2F;sbin&#x2F;init &#x2F;sbin&#x2F;.init.old
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This ensures that even when &lt;code&gt;&#x2F;sbin&#x2F;init&lt;&#x2F;code&gt; is overwritten, its link
+count doesn’t drop to zero and we don’t block remounting read-only,
+preventing a clean shutdown.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s it for now, let’s see what other surprises appear in the future.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;small&gt;NP: Laura Jane Grace—Punk Rock In Basements&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>https://fzakaria.com/2024/12/18/faking-incremental-docker-loads/planet.tvl.fyi</id>
+      <title>Faking incremental Docker loads</title>
+      
+        <link href="https://fzakaria.com/2024/12/18/faking-incremental-docker-loads.html" rel="alternate"/>
+      
+      
+        <updated>2024-12-18T20:21:00Z</updated>
+      
+      
+        <published>2024-12-18T20:21:00Z</published>
+      
+      <summary>
+          While testcontainers have made it simple to run containers for unit &amp;amp; system tests, they are not well suited for Bazel as they rely on docker pull to hydrate the Docker daemon. The pulls rely on tags which may be rewritten and require input from data (i.e, the images themselves) unknown to Bazel, as well as network access.
+        </summary>
+      
+        <author>
+          <name>unknown</name>
+          </author>
+        
+      <content  >
+          &lt;p&gt;While &lt;a href=&quot;https:&#x2F;&#x2F;testcontainers.com&#x2F;&quot;&gt;testcontainers&lt;&#x2F;a&gt; have made it simple to run containers for unit &amp;amp; system tests, they are not well suited for &lt;a href=&quot;https:&#x2F;&#x2F;bazel.build&#x2F;&quot;&gt;Bazel&lt;&#x2F;a&gt; as they rely on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker pull&lt;&#x2F;code&gt; to hydrate the Docker daemon. The pulls rely on tags which may be rewritten and require input from data (i.e, the images themselves) unknown to Bazel, as well as network access.&lt;&#x2F;p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rules_oci&lt;&#x2F;code&gt; is a popular Bazel rules library to incorporate Docker (OCI) images into Bazel that can be used to build subsequent images or be passed as depenedencies to targets.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I wrote a small example &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fzakaria&#x2F;bazel-testcontainer-example&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;fzakaria&#x2F;bazel-testcontainer-example&lt;&#x2F;a&gt; that demonstrates how you can &lt;em&gt;modify&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;java.testcontainers.org&#x2F;&quot;&gt;testcontainers-java&lt;&#x2F;a&gt; to leverage these images by passing in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tar.gz&lt;&#x2F;code&gt; of the image as a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;&#x2F;code&gt; dependency and explicitly loading it at startup.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;java_test&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;TestContainerExampleTest&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;srcs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;TestContainerExampleTest.java&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;data&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;:tarball.tar&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;env&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TARBALL_RUNFILE&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;$(rlocationpath :tarball.tar)&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;runtime_deps&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;@maven&#x2F;&#x2F;:org_slf4j_slf4j_simple&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;deps&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;@bazel_tools&#x2F;&#x2F;tools&#x2F;java&#x2F;runfiles&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;@maven&#x2F;&#x2F;:org_testcontainers_testcontainers&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;layer&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;srcs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PingService_deploy.jar&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;oci_image&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;image&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;base&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;@distroless_java&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;entrypoint&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;java&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;-jar&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&#x2F;src&#x2F;PingService_deploy.jar&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;tars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;:layer&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;&lt;em&gt;Sounds great?&lt;&#x2F;em&gt; 🙌 … &lt;em&gt;Right?&lt;&#x2F;em&gt; 😕&lt;&#x2F;p&gt;
+
+&lt;p&gt;Turns out if your image is moderately large (&amp;gt;2GiB), an individual upload can take a relatively long time (~30s). This can compound if you have multiple concurrent tests each tryin to upload to the Docker daemon such as in the case in Bazel.&lt;&#x2F;p&gt;
+
+&lt;p&gt;There is &lt;strong&gt;no handshaking&lt;&#x2F;strong&gt; or range-read of the compressed stream, meaning you must send the whole compressed image, which must then be uncompressed and validated for Docker to determine it already had the necessary layers present.&lt;&#x2F;p&gt;
+
+&lt;p&gt;We experienced this with our tests either failing or timing out as each concurrent test tried to upload multi-gigabyte images concurrently.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Turns out, this limitation is documented and known:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;buildx&#x2F;issues&#x2F;107&quot;&gt;docker&#x2F;buildx&#x2F;issues&#x2F;107&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazel-contrib&#x2F;rules_oci&#x2F;issues&#x2F;454&quot;&gt;bazel-contrib&#x2F;rules_oci&#x2F;issues&#x2F;454&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;moby&#x2F;moby&#x2F;issues&#x2F;44369&quot;&gt;moby&#x2F;moby&#x2F;issues&#x2F;44369&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+&lt;p&gt;❗ &lt;em&gt;There exists no API to query the layers the Docker engine has locally&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;For a &lt;em&gt;quick’n’dirty&lt;&#x2F;em&gt; (but effective) workaround I relied on the following before our CI job&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; bazel query &lt;span class=&quot;s2&quot;&gt;&quot;kind(oci_load, &#x2F;&#x2F;...)&quot;&lt;&#x2F;span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+    | xargs &lt;span class=&quot;nt&quot;&gt;-n&lt;&#x2F;span&gt; 1 &lt;span class=&quot;nt&quot;&gt;-P&lt;&#x2F;span&gt; 8 &lt;span class=&quot;nt&quot;&gt;-I&lt;&#x2F;span&gt; target bazel run target
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;It would be great if we didn’t need any invocation prior to a test; are Bazel users left &lt;em&gt;holding the bag&lt;&#x2F;em&gt; ? 🫂&lt;&#x2F;p&gt;
+
+&lt;p&gt;Don’t despair! Turns out we can &lt;strong&gt;fake incrementality&lt;&#x2F;strong&gt; uploads in Docker with a relatively ingenious method. 😭&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note: I did not invent this solution. There are other existing prior art, namely:&lt;&#x2F;p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;rules_docker&#x2F;blob&#x2F;master&#x2F;container&#x2F;incremental_load.sh.tpl&quot;&gt;bazelbuild&#x2F;rules_docker&#x2F;blob&#x2F;master&#x2F;container&#x2F;incremental_load.sh.tpl&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aspect-build&#x2F;bazel-examples&#x2F;blob&#x2F;main&#x2F;oci_python_image&#x2F;hello_world&#x2F;app_test.py&quot;&gt;aspect-build&#x2F;bazel-examples&#x2F;blob&#x2F;main&#x2F;oci_python_image&#x2F;hello_world&#x2F;app_test.py&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;datahouse&#x2F;bazel_buildlib&#x2F;blob&#x2F;oss&#x2F;buildlib&#x2F;private&#x2F;docker&#x2F;src&#x2F;loadImageToDocker.ts&quot;&gt;datahouse&#x2F;bazel_buildlib&#x2F;blob&#x2F;oss&#x2F;buildlib&#x2F;private&#x2F;docker&#x2F;src&#x2F;loadImageToDocker.ts
+&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+  &lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;🪄 The trick is that we will upload Docker images with &lt;strong&gt;metadata but no actual layer data&lt;&#x2F;strong&gt;, and incrementally include the layer only if it’s required.&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;images&#x2F;piccard_docker_image.jpg&quot; alt=&quot;Piccard graphic&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Let’s break it down.&lt;&#x2F;p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Docker image, which is different than the OCI format, is a &lt;em&gt;tar&lt;&#x2F;em&gt; file (or &lt;em&gt;tar.gz&lt;&#x2F;em&gt;) with a file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;manifest.json&lt;&#x2F;code&gt; that dictates the files that should be present within the archive.&lt;&#x2F;p&gt;
+
+    &lt;p&gt;I’ve shortened the sha256 in the below example.&lt;&#x2F;p&gt;
+
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;&#x2F;span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;Config&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blobs&#x2F;sha256&#x2F;8f73f04&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;&#x2F;span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;RepoTags&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;example:0.1&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;&#x2F;span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;Layers&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;&#x2F;span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blobs&#x2F;sha256&#x2F;6dd6992&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;&#x2F;span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blobs&#x2F;sha256&#x2F;41e9df2&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;&#x2F;span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blobs&#x2F;sha256&#x2F;3ec46cfe&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;&#x2F;span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blobs&#x2F;sha256&#x2F;1225e888&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]}]&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;
+  &lt;&#x2F;li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Although our metadata outlines &lt;em&gt;4 different layers&lt;&#x2F;em&gt;, we can can omit the actual layer data.&lt;&#x2F;p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;nb&quot;&gt;tar &lt;&#x2F;span&gt;tf testimage.tar.gz | tree &lt;span class=&quot;nt&quot;&gt;--fromfile&lt;&#x2F;span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;&#x2F;span&gt;
+ &lt;span class=&quot;nb&quot;&gt;.&lt;&#x2F;span&gt;
+ ├── blobs
+ │   └── sha256
+ │       └── 8f73f04
+ └── manifest.json
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;
+  &lt;&#x2F;li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If we try to upload this image, if the local daemon has all the layers already present, the upload will succeed &lt;strong&gt;despite us not including any actual layers&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; docker load &amp;lt; testimage.tar.gz
+ Loaded image: example:0.1
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;
+  &lt;&#x2F;li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a layer is missing locally, we detect it via the error response and subsequently include it in
+the archive and re-upload it.&lt;&#x2F;p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; docker load &amp;lt; testimage.tar.gz
+ open &#x2F;var&#x2F;lib&#x2F;docker&#x2F;tmp&#x2F;docker-import-2494045611&#x2F;blobs&#x2F;sha256&#x2F;6dd6992:
+ no such file or directory
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;
+  &lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+
+&lt;p&gt;We can perform these steps incrementally by adding each layer one-at-a-time which looks like the following
+in pseudocode.&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⚠️ It’s important to also restrict the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;diff_ids&lt;&#x2F;code&gt; which represent a validation of the state of the container
+when the layers are applied.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;function&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;incremental_load&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;repo_tag&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;base_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Incrementally loads a Docker image.&quot;&quot;&quot;&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Parse image index
+&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;index_path&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;base_path&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&#x2F;index.json&quot;&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;index&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;from_json&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;index_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Parse manifest and config
+&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;manifest_digest&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;manifests&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;digest&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;manifest&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;from_json&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;base_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;manifest_digest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;full_config&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;from_json&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;blob&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;base_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;manifest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;digest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;config_blob_path&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;blob_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;manifest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;missing_layer&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;null&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;i&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;&#x2F;span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;manifest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Try uploading each layer one at a time
+&lt;&#x2F;span&gt;  &lt;span class=&quot;n&quot;&gt;layers&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;manifest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Create partial config
+&lt;&#x2F;span&gt;  &lt;span class=&quot;n&quot;&gt;tmp_config&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;full_config&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;clone&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;rootfs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;diffIds&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Create partial image tar
+&lt;&#x2F;span&gt;  &lt;span class=&quot;n&quot;&gt;image&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;create_image_tar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;base_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;config_blob_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+                           &lt;span class=&quot;n&quot;&gt;tmp_config&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;layers&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;missing_layer&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Upload partial image, and parse out if any layer is needed
+&lt;&#x2F;span&gt;  &lt;span class=&quot;n&quot;&gt;missing_layer&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;upload_image&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# No missing layer, move onto the next one
+&lt;&#x2F;span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;missing_layer&lt;&#x2F;span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;i&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;&#x2F;span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Missing layer found, try again but this time upload it!
+&lt;&#x2F;span&gt;    &lt;span class=&quot;k&quot;&gt;pass&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Upload full image
+&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;full_image&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;create_image_tar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;base_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;config_blob_path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+                              &lt;span class=&quot;n&quot;&gt;full_config&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;manifest&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;upload_image&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;full_image&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are interested in the equivalent Java code let me know and I can publish it.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;With this approach you can now have &lt;strong&gt;incremental Docker uploads&lt;&#x2F;strong&gt;! Huzzah! 🙌🏽&lt;&#x2F;p&gt;
+
+&lt;p&gt;Problem solved? Sorta? Well….not actually. If the images you are uploading contain
+individual large layers, perhaps they were squashed, we are back to square one.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Here we see an example image whose single layer is 1.28GiB.&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; docker image &lt;span class=&quot;nb&quot;&gt;history &lt;&#x2F;span&gt;bad_example:0.1 &lt;span class=&quot;nt&quot;&gt;--human&lt;&#x2F;span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;--format&lt;&#x2F;span&gt; &lt;span class=&quot;s1&quot;&gt;&#x27;table &#x27;&lt;&#x2F;span&gt; | &lt;span class=&quot;nb&quot;&gt;head
+&lt;&#x2F;span&gt;SIZE
+0B
+0B
+7.87kB
+0B
+1.28GB
+0B
+0B
+0B
+0B
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;h3 id=&quot;wheres-time-spent&quot;&gt;Where’s time spent?&lt;&#x2F;h3&gt;
+&lt;p&gt;At this point you have to improve the image by seggregating the data into more multiple layers or continue to upload it outside of the Bazel context.&lt;&#x2F;p&gt;
+
+&lt;p&gt;🕵️ I would like to dive deeper and understand why the uploads completely stall.&lt;&#x2F;p&gt;
+
+&lt;p&gt;The relevant code in Docker &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;moby&#x2F;moby&#x2F;blob&#x2F;0d53725a7f8abb0b75961806da252f31155cb813&#x2F;image&#x2F;tarexport&#x2F;load.go#L33&quot;&gt;can be found here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Quick benchmarks done on my M3 Pro MacBook demonstrate it takes ~35-45 seconds to gzip a 2GiB file.&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;nb&quot;&gt;time &lt;&#x2F;span&gt;docker save bad_example:0.1 | &lt;span class=&quot;nb&quot;&gt;gzip&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; test.tar.gz
+docker save bad_example:0.1  0.49s user 2.49s system 6% cpu 44.843 total
+&lt;span class=&quot;nb&quot;&gt;gzip&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; test.tar.gz  36.72s user 0.48s system 82% cpu 44.842 total
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Uploading the image seems to take ~15 seconds&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;nb&quot;&gt;time &lt;&#x2F;span&gt;docker load &amp;lt; test.tar.gz
+75cc828c731c: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  102.1MB&#x2F;102.1MB
+20ebbf9559c4: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  552.9MB&#x2F;552.9MB
+1049fe83b46b: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  10.14MB&#x2F;10.14MB
+b4a5b99cb981: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  331.8kB&#x2F;331.8kB
+a9e2a3aa94a5: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  39.34MB&#x2F;39.34MB
+93ca7c014948: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  6.144kB&#x2F;6.144kB
+71d670ccc47b: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  4.608kB&#x2F;4.608kB
+1838b4d29208: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  2.048kB&#x2F;2.048kB
+0d9eb9b0c742: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;   2.56kB&#x2F;2.56kB
+c68e52b834e4: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;  1.284GB&#x2F;1.284GB
+749f1729f609: Loading layer &lt;span class=&quot;o&quot;&gt;[==================================================&amp;gt;]&lt;&#x2F;span&gt;   16.9kB&#x2F;16.9kB
+Loaded image: bad_example:0.1
+docker load &amp;lt; test.tar.gz  0.38s user 1.62s system 13% cpu 14.565 total
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;That means creating the archive  and uploading it can take ~1 minute of test execution time. This problem seems to compound with multiple archives created and uploaded; more research is needed to know if the bottleneck is the Docker daemon itself (a global lock?) or the I&#x2F;O of the disk.&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>432c2f5d-522a-406e-427b-30e9fef34c8d/planet.tvl.fyi</id>
+      <title>The "simple" 38 step journey to getting an RFC</title>
+      
+        <link href="https://blog.benjojo.co.uk/post/rfc-in-38-simple-steps" />
+      
+      
+        <updated>2024-12-05T10:43:41Z</updated>
+      
+      
+        <published>2024-12-05T10:43:41Z</published>
+      
+      <summary>
+          &lt;h1&gt;The &amp;ldquo;simple&amp;rdquo; 38 step journey to getting an RFC&lt;&#x2F;h1&gt;
+
+&lt;p&gt;The Internet is built on the mutual understanding of network protocols and practices, and most of those protocols are defined using Request For Comments (RFC) or Best Common Practices (BCP) documents.&lt;&#x2F;p&gt;
+        </summary>
+      
+        <author>
+          <name>author</name>
+          <email>ben@benjojo.co.uk</email>
+          </author>
+        <uri></uri>
+        
+      </entry>
+  
+    <entry>
+      <id>tag:chneukirchen@yahoo.de,2004-06:chris-blogs-x-20241129-184946/planet.tvl.fyi</id>
+      <title>Time series based monitoring in very heterogeneous environments</title>
+      
+        <link href="https://leahneukirchen.org/blog/archive/2024/11/time-series-based-monitoring-in-very-heterogeneous-environments.html" rel="alternate"/>
+      
+      
+        <updated>2024-11-29T18:49:46Z</updated>
+      
+      
+        <published>2024-11-29T18:49:46Z</published>
+      
+      
+        <author>
+          <name>Leah Neukirchen</name>
+          <email>leah@vuxu.org</email>
+          </author>
+        <uri>https://leahneukirchen.org/</uri>
+        
+      <content  >
+          &lt;p&gt;For the last few years, I have built a centralized monitoring system
+based on &lt;a href=&quot;https:&#x2F;&#x2F;prometheus.io&#x2F;&quot;&gt;Prometheus&lt;&#x2F;a&gt; that gathers various
+metrics across my whole private fleet of servers.&lt;&#x2F;p&gt;
+&lt;p&gt;Since writing Prometheus exporters is rather simple, I have written
+some of them myself:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leahneukirchen&#x2F;lywsd03mmc-exporter&#x2F;&quot;&gt;lywsd03mmc-exporter&lt;&#x2F;a&gt;,
+a Prometheus exporter for the LYWSD03MMC BLE
+thermometer which monitors my flat’s temperature and air humidity
+(as well as when to replace the batteries).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leahneukirchen.org&#x2F;dotfiles&#x2F;bin&#x2F;card10-bme680-exporter.rb&quot;&gt;card10-bme680-exporter&lt;&#x2F;a&gt;,
+which accesses the environmental sensor of the &lt;a href=&quot;https:&#x2F;&#x2F;card10.badge.events.ccc.de&#x2F;&quot;&gt;card10&lt;&#x2F;a&gt;
+via serial port for measuring air quality.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leahneukirchen.org&#x2F;dotfiles&#x2F;bin&#x2F;tab-exporter.rb&quot;&gt;tab-exporter&lt;&#x2F;a&gt;
+which exports the number of Firefox tabs I have open
+(this needs &lt;a href=&quot;https:&#x2F;&#x2F;git.yori.cc&#x2F;yorick&#x2F;dotfiles&#x2F;src&#x2F;branch&#x2F;master&#x2F;pkgs&#x2F;countfftabs&quot;&gt;countfftabs&lt;&#x2F;a&gt;).&lt;&#x2F;li&gt;
+&lt;li&gt;I also forked and improved &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;leahneukirchen&#x2F;nano-exporter&#x2F;&quot;&gt;nano-exporter&lt;&#x2F;a&gt;,
+a very lightweight and zero-dependency Linux version of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus&#x2F;node_exporter&quot;&gt;node_exporter&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Additionally I use the following pre-made exporters:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;prometheus&#x2F;node_exporter&quot;&gt;node_exporter&lt;&#x2F;a&gt; for monitoring FreeBSD and some other hosts.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;martin-helmich&#x2F;prometheus-nginxlog-exporter&quot;&gt;prometheus-nginxlog-exporter&lt;&#x2F;a&gt; for web server metrics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SuperQ&#x2F;chrony_exporter&quot;&gt;chrony_exporter&lt;&#x2F;a&gt; for monitoring my NTP server.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;brendanbank&#x2F;gpsd-prometheus-exporter&quot;&gt;gpsd-prometheus-exporter&lt;&#x2F;a&gt; for monitoring the GPS signal on my NTP server.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SuperQ&#x2F;smokeping_prober&quot;&gt;smokeping_prober&lt;&#x2F;a&gt; for detecting network outages and other problems.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;google&#x2F;mtail&quot;&gt;mtail&lt;&#x2F;a&gt; for extracting metrics out of Postfix logs and other log files.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;As you can see, this is quite a lot of different exporters running on
+different hosts.&lt;&#x2F;p&gt;
+&lt;p&gt;A few months ago I decided to rebuild the centralized metrics server on
+top of &lt;a href=&quot;https:&#x2F;&#x2F;victoriametrics.com&#x2F;&quot;&gt;VictoriaMetrics&lt;&#x2F;a&gt; and with proper
+access control.&lt;&#x2F;p&gt;
+&lt;p&gt;Why VictoriaMetrics? I tried it for a bit and it seems to use less RAM
+and less storage while supporting long term storage nicely.  It also has
+better mechanisms for importing and exporting data than Prometheus.&lt;&#x2F;p&gt;
+&lt;h5&gt;Setting up VictoriaMetrics&lt;&#x2F;h5&gt;
+&lt;p&gt;Setting up &lt;code&gt;victoria-metrics&lt;&#x2F;code&gt; is very easy.  I run it like this:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;victoria-metrics -enableTCP6 \
+  -storageDataPath=&#x2F;srv&#x2F;victoria-metrics \
+  -retentionPeriod=99y \
+  -httpListenAddr=127.0.0.1:8428 \
+  -selfScrapeInterval=20s \
+  -promscrape.config &#x2F;usr&#x2F;local&#x2F;etc&#x2F;prometheus&#x2F;prometheus.yaml
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Note that you need to enable IPv6 manually all the time.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;prometheus.yaml&lt;&#x2F;code&gt; file is compatible with stock Prometheus.&lt;&#x2F;p&gt;
+&lt;p&gt;I then use Grafana to connect to it, using the Prometheus protocol.&lt;&#x2F;p&gt;
+&lt;h5&gt;Scraping non-public endpoints&lt;&#x2F;h5&gt;
+&lt;p&gt;I don’t consider most of above metrics to be super private, but they
+certainly leak metadata (e.g. am I at home or not, how much mail do I
+get) so I don’t want to publish them on the net accessible to everyone
+that finds them.&lt;&#x2F;p&gt;
+&lt;p&gt;Since Prometheus mainly favors a pull based model, we need to figure
+out ways to protect the data.&lt;&#x2F;p&gt;
+&lt;p&gt;“Obvious” solutions like using mTLS or a maintenance VPN would require
+reconfiguring many machines and were deemded too much effort.&lt;&#x2F;p&gt;
+&lt;p&gt;Essentially, I found three solutions that I will describe in detail:&lt;&#x2F;p&gt;
+&lt;h4&gt;Hiding metrics behind existing web servers&lt;&#x2F;h4&gt;
+&lt;p&gt;This is the easiest mechanism, when your host already runs a web
+server: simply use it as a proxy for the metrics, and filter access by
+IP address or Basic Auth.  Since most webservers have HTTPS today
+already, you get encryption for free.&lt;&#x2F;p&gt;
+&lt;p&gt;A simple nginx configuration to do this would be:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;location &#x2F;metrics {
+        proxy_http_version 1.1;
+        proxy_pass http:&#x2F;&#x2F;127.0.0.1:9100&#x2F;metrics;
+        access_log off;
+        allow 127.0.0.1;
+        allow ...;
+        deny all;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You need to configure the metrics exporter to only listen on localhost.&lt;&#x2F;p&gt;
+&lt;h5&gt;Reverse SSH tunnelling&lt;&#x2F;h5&gt;
+&lt;p&gt;This is a quite elegant solution that provides encryption, flexible
+configuration, and can be used when the scrape target doesn’t have a
+public IP address.  OpenSSH provides the &lt;code&gt;-R&lt;&#x2F;code&gt; flag to do reverse port
+forwarding, but most people don’t know it also can be used to run a
+reverse SOCKS proxy!&lt;&#x2F;p&gt;
+&lt;p&gt;For this, I create a separate Unix user on scrape target and server,
+and assign it a SSH key.  Then, the target runs:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;ssh -o ServerAliveInterval=15 -o ExitOnForwardFailure=yes -R8083 server.example.com -NT
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You should run this using &lt;a href=&quot;https:&#x2F;&#x2F;smarden.org&#x2F;runit&#x2F;&quot;&gt;service supervision&lt;&#x2F;a&gt;
+so it tries to reconnect on network failures.&lt;&#x2F;p&gt;
+&lt;p&gt;On the server side, you restrict access to only open a port
+using &lt;code&gt;&#x2F;etc&#x2F;ssh&#x2F;authorized_keys&#x2F;scrape-user&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;restrict,port-forwarding,permitlisten=&amp;quot;8083&amp;quot; ssh-ed25519 ....
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then, the server can use port 8083 as a SOCKS proxy to access the
+network of the scrape target directly!  So you can write a scrape config like:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;  - job_name: &#x27;nano-exporter-hecate&#x27;
+    proxy_url: &#x27;socks5:&#x2F;&#x2F;127.0.0.1:8083&#x27;
+    static_configs:
+    - targets: [&#x27;127.0.0.1:9100&#x27;]
+      labels:
+        instance: &#x27;hecate.home.vuxu.org:9100&#x27;
+    - targets: [&#x27;10.0.0.119:9100&#x27;]
+      labels:
+        instance: &#x27;leto.home.vuxu.org:9100&#x27;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here, we use a host in my home network that is always on, and can also
+safely scrape other hosts in the same LAN.
+(Note that the IP addresses in &lt;code&gt;targets&lt;&#x2F;code&gt; are resolved relative to the SSH client.)&lt;&#x2F;p&gt;
+&lt;h5&gt;Pushing with vmagent&lt;&#x2F;h5&gt;
+&lt;p&gt;I used the SSH approach for my notebook as well, but there’s the
+problem that we lose data when there’s no Internet connection
+available.  I have thus moved my notebook to a solution using
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.victoriametrics.com&#x2F;vmagent&#x2F;&quot;&gt;&lt;code&gt;vmagent&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, which is
+included with VictoriaMetrics.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;vmagent&lt;&#x2F;code&gt; does scrape metrics just like VictoriaMetrics (and also
+supports all other metrics protocols, but I don’t use them), but it
+simply forwards everything via the Prometheus remote write protocol,
+and locally buffers data if it can’t forward the metrics currently.&lt;&#x2F;p&gt;
+&lt;p&gt;On the server side, we need to provide access to the remote write
+protocol.  Since VictoriaMetrics operates without internal access
+control, we can use the
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.victoriametrics.com&#x2F;vmauth&#x2F;&quot;&gt;&lt;code&gt;vmauth&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; gateway to
+implement Basic Auth over TLS.  (Again, you can use an existing HTTPS
+server and proxy it, but in this case I don’t have a HTTPS server on
+the metrics host.)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;vmauth&lt;&#x2F;code&gt; needs some configuration.  First, we create a self-signed
+certificate (Let’s Encrypt support is limited to the commercial
+version of VictoriaMetrics unfortunately):&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;openssl req -x509 -newkey ed25519 \
+	-keyout &#x2F;usr&#x2F;local&#x2F;etc&#x2F;vmauth&#x2F;key.pem \
+	-out &#x2F;usr&#x2F;local&#x2F;etc&#x2F;vmauth&#x2F;cert.pem \
+	-sha256 -days 3650 -nodes -subj &amp;quot;&#x2F;CN=server.example.org&amp;quot; \
+	-addext &amp;quot;subjectAltName = DNS:server.example.org&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I then run it as:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;vmauth -enableTCP6 \
+  -tls \
+  -tlsCertFile=&#x2F;usr&#x2F;local&#x2F;etc&#x2F;vmauth&#x2F;cert.pem \
+  -tlsKeyFile=&#x2F;usr&#x2F;local&#x2F;etc&#x2F;vmauth&#x2F;key.pem \
+  -reloadAuthKey=secret \
+  -flagsAuthKey=secret \
+  -metricsAuthKey=secret \
+  -pprofAuthKey=secret \
+  -auth.config=&#x2F;usr&#x2F;local&#x2F;etc&#x2F;vmauth&#x2F;vmauth.yaml
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;(I think it’s unfortunate that we need to add auth-keys now,
+as internal and forwarded API are exposed on the same port…)&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;vmauth.yaml&lt;&#x2F;code&gt; configures who can access:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;users:
+- username: &amp;quot;client&amp;quot;
+  password: &amp;quot;evenmoresecret&amp;quot;
+  url_prefix: &amp;quot;http:&#x2F;&#x2F;localhost:8428&#x2F;&amp;quot;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here, &lt;code&gt;localhost:8428&lt;&#x2F;code&gt; is the VictoriaMetrics instance.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, on the scrape target we can now run &lt;code&gt;vmagent&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;vmagent -enableTCP6 \
+        -promscrape.config=&#x2F;etc&#x2F;vmagent&#x2F;promscrape.yml \
+        -httpListenAddr=127.0.0.1:8429 \
+        -remoteWrite.url=https:&#x2F;&#x2F;server.example.org:8427&#x2F;api&#x2F;v1&#x2F;write \
+        -remoteWrite.label=vmagent=myhostname \
+        -remoteWrite.retryMinInterval=30s \
+        -remoteWrite.basicAuth.username=client \
+        -remoteWrite.basicAuth.passwordFile=&#x2F;etc&#x2F;vmagent&#x2F;passwd \
+        -remoteWrite.tlsCAFile=&#x2F;etc&#x2F;vmagent&#x2F;cert.pem
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;cert.pem&lt;&#x2F;code&gt; is copied from the server, the password is stored in &lt;code&gt;&#x2F;etc&#x2F;vmagent&#x2F;passwd&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that the &lt;code&gt;vmagent&lt;&#x2F;code&gt; instance is configured locally, so we can again
+scrape targets that are only reachable from it.  We also can adjust
+the scrape targets without having to touch the metrics server itself.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;small&gt;NP: Godspeed You! Black Emperor—Broken Spires At Dead Kapital&lt;&#x2F;small&gt;&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>https://fzakaria.com/2024/11/28/bazel-knowledge-protobuf-is-the-worst-when-it-should-be-the-best/planet.tvl.fyi</id>
+      <title>Bazel Knowledge: Protobuf is the worst when it should be the best</title>
+      
+        <link href="https://fzakaria.com/2024/11/28/bazel-knowledge-protobuf-is-the-worst-when-it-should-be-the-best.html" rel="alternate"/>
+      
+      
+        <updated>2024-11-28T22:07:00Z</updated>
+      
+      
+        <published>2024-11-28T22:07:00Z</published>
+      
+      <summary>
+          Bazel has always had support for protocol buffers (protobuf) since the beginning. Both being a Google product, one would think that their integration would be seamless and the best experience. Unfortunately, it’s some of the worst part of the user experience with Bazel I’ve found. 😔
+        </summary>
+      
+        <author>
+          <name>unknown</name>
+          </author>
+        
+      <content  >
+          &lt;p&gt;Bazel has always had support for &lt;a href=&quot;https:&#x2F;&#x2F;protobuf.dev&#x2F;&quot;&gt;protocol buffers (protobuf)&lt;&#x2F;a&gt; since the beginning.
+Both being a Google product, one would think that their integration would be seamless and the best experience.
+Unfortunately, it’s some of the worst part of the user experience with Bazel I’ve found. 😔&lt;&#x2F;p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Let’s start with the basics; &lt;em&gt;What rule should I adopt for protobufs?&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Well first I Google &lt;em&gt;“Bazel protobuf”&lt;&#x2F;em&gt; and land on the &lt;a href=&quot;https:&#x2F;&#x2F;bazel.build&#x2F;reference&#x2F;be&#x2F;protocol-buffer&quot;&gt;protobuf reference page&lt;&#x2F;a&gt; for Bazel
+which states:&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If using Bazel, please load the rule from https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;rules_proto.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;One may think the sensible &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;rules_proto&quot;&gt;rules_proto&lt;&#x2F;a&gt; is a good starting
+point but the &lt;em&gt;README.md&lt;&#x2F;em&gt; states:&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This repository is &lt;strong&gt;deprecated&lt;&#x2F;strong&gt;…we decided to move the implementation of
+the rules together with proto compiler into protobuf repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;OK…🤔&lt;&#x2F;p&gt;
+
+&lt;p&gt;Let’s go check &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;protocolbuffers&#x2F;protobuf&quot;&gt;protobuf&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;The &lt;em&gt;README.md&lt;&#x2F;em&gt; claims one can install one of two ways by inserting the following
+into your &lt;em&gt;MODULE.bazel&lt;&#x2F;em&gt; without much explanation as to the difference. 🤷‍♂️&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;bazel_dep&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;protobuf&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;VERSION&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;span class=&quot;c1&quot;&gt;#
+# or
+#
+&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;bazel_dep&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;protobuf&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;VERSION&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+          &lt;span class=&quot;n&quot;&gt;repo_name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;com_google_protobuf&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;I decide to audit the source to see what’s going on.
+You quickly land on the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;protocolbuffers&#x2F;protobuf&#x2F;blob&#x2F;cbecd9d2fa1d7187cca63a8c18838e87a4f613ec&#x2F;bazel&#x2F;private&#x2F;bazel_proto_library_rule.bzl#L239&quot;&gt;rule definition&lt;&#x2F;a&gt;
+for &lt;em&gt;proto_library&lt;&#x2F;em&gt; and see the following documentation for the rule. 🤦&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;proto_library&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;_proto_library_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# TODO: proto_common docs are missing
+&lt;&#x2F;span&gt;    &lt;span class=&quot;c1&quot;&gt;# TODO: ProtoInfo link doesn&#x27;t work and docs are missing
+&lt;&#x2F;span&gt;    &lt;span class=&quot;n&quot;&gt;doc&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;p&amp;gt;If using Bazel, please load the rule from
+&amp;lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;rules_proto&quot;&amp;gt;
+https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;rules_proto&amp;lt;&#x2F;a&amp;gt;.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Where is the &lt;strong&gt;protoc&lt;&#x2F;strong&gt; (protobuf compiler) ultimately coming from for the rule?
+I notice these interesting snippets in the rule.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;toolchains&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;if_legacy_toolchain&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;_proto_compiler&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;cfg&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;exec&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;executable&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;allow_files&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;default&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;configuration_field&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;proto&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;proto_compiler&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;_incompatible_toolchain_resolution&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;
+    &lt;span class=&quot;nb&quot;&gt;getattr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;native_proto_common&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;INCOMPATIBLE_ENABLE_PROTO_TOOLCHAIN_RESOLUTION&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;_if_legacy_toolchain&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;legacy_attr_dict&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;_incompatible_toolchain_resolution&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;&#x2F;span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;legacy_attr_dict&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Turns out that &lt;em&gt;INCOMPATIBLE_ENABLE_PROTO_TOOLCHAIN_RESOLUTION&lt;&#x2F;em&gt; is set from the command line &lt;a href=&quot;https:&#x2F;&#x2F;bazel.build&#x2F;reference&#x2F;command-line-reference#flag--incompatible_enable_proto_toolchain_resolution&quot;&gt;ref&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;–[no]incompatible_enable_proto_toolchain_resolution default: “false”
+If true, proto lang rules define toolchains from protobuf repository.
+Tags: loading_and_analysis, incompatible_change&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;I don’t have that in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bazelrc&lt;&#x2F;code&gt; so let’s ignore it.
+That means our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_proto_compiler&lt;&#x2F;code&gt; is coming from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;configuration_field(&quot;proto&quot;, &quot;proto_compiler&quot;)&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;You then search the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;bazel&#x2F;blob&#x2F;a3f0cebd35989e120d5cdaf7882b4e93df82e590&#x2F;src&#x2F;main&#x2F;java&#x2F;com&#x2F;google&#x2F;devtools&#x2F;build&#x2F;lib&#x2F;rules&#x2F;proto&#x2F;ProtoConfiguration.java#L68&quot;&gt;bazelbuild&#x2F;bazel&lt;&#x2F;a&gt; source to find where it’s defined.&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Option&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;proto_compiler&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;defaultValue&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;ProtoConstants&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;DEFAULT_PROTOC_LABEL&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;converter&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;CoreOptionConverters&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;LabelConverter&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;documentationCategory&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;OptionDocumentationCategory&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;UNCATEGORIZED&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;effectTags&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;nc&quot;&gt;OptionEffectTag&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;AFFECTS_OUTPUTS&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;OptionEffectTag&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;LOADING_AND_ANALYSIS&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;},&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;help&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;The label of the proto-compiler.&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;Label&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;protoCompiler&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;&#x2F;&#x2F; The flags need to point to @bazel_tools, because this is a canonical repo&lt;&#x2F;span&gt;
+&lt;span class=&quot;c1&quot;&gt;&#x2F;&#x2F; name when either bzlmod or WORKSPACE mode is used.&lt;&#x2F;span&gt;
+&lt;span class=&quot;cm&quot;&gt;&#x2F;** Default label for proto compiler.*&#x2F;&lt;&#x2F;span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;&#x2F;span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;&#x2F;span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;&#x2F;span&gt; &lt;span class=&quot;no&quot;&gt;DEFAULT_PROTOC_LABEL&lt;&#x2F;span&gt;
+        &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;@bazel_tools&#x2F;&#x2F;tools&#x2F;proto:protoc&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Chasing down the ultimate target in the defining &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;bazel&#x2F;blob&#x2F;3d528ac42cce1a71d8358b57cdbe4b3e743bd307&#x2F;tools&#x2F;proto&#x2F;BUILD#L15&quot;&gt;BUILD&lt;&#x2F;a&gt;
+file you discover it’s an alias to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;@com_google_protobuf&#x2F;&#x2F;:protoc&quot;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Those aliases are needed to resolve the repository name correctly in both
+# bzlmod and WORKSPACE mode. They are resolved in the namespace of MODULE.tools
+&lt;&#x2F;span&gt;
+&lt;span class=&quot;n&quot;&gt;alias&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;protoc&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;actual&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;@com_google_protobuf&#x2F;&#x2F;:protoc&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;😲 So we discovered why &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com_google_protobuf&lt;&#x2F;code&gt; may want to be the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;repo_name&lt;&#x2F;code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bazel_dep&lt;&#x2F;code&gt; rule.
+The repository name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com_google_protobuf&lt;&#x2F;code&gt; is &lt;em&gt;hard-coded&lt;&#x2F;em&gt; within the Bazel source code for the location
+to discover the protoc compiler.&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You’ll have to trust me that the resolution to the compiler for the language toolchains
+such as &lt;em&gt;java_proto_library&lt;&#x2F;em&gt; is the same as well; just way more obfuscated.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;The rabbit hole only goes deeper if you consider &lt;a href=&quot;https:&#x2F;&#x2F;grpc.io&#x2F;&quot;&gt;gRPC&lt;&#x2F;a&gt;, other languages and then having to manage
+various runtimes (compatibility matrix) for your language across your codebases if they leave source of truth.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I feel like we discovered a lot but didn’t really learn or accomplish anything. 😩&lt;&#x2F;p&gt;
+
+&lt;h3 id=&quot;brighter-future&quot;&gt;Brighter Future?&lt;&#x2F;h3&gt;
+
+&lt;p&gt;Lots of interesting work is being done by the &lt;a href=&quot;https:&#x2F;&#x2F;bazel-contrib.github.io&#x2F;SIG-rules-authors&#x2F;proto-grpc.html&quot;&gt;rule-authors SIG&lt;&#x2F;a&gt; (Special Interest Group).&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;That doc has a great in-depth overview of the current &lt;em&gt;state of affairs&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;The most notable changes on the horizon are migrating protocol buffers to Bazel’s toolchain mechanism.
+This should make binding to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;protoc&lt;&#x2F;code&gt; look like other toolchains in Bazel and no longer special case
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com_google_protobuf&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What are toolchains? In my mind effectively the capability to late bind a label to a target.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;To me, a simple immediate improvement would be fixing the documentation around &lt;em&gt;rules_proto&lt;&#x2F;em&gt; and
+having a more clear path on how to adopt Bazel given some constraint (i.e. Bazel &amp;gt;= 7.0).&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;blog.bazel.build&#x2F;2017&#x2F;02&#x2F;27&#x2F;protocol-buffers.html&quot;&gt;latest blog post&lt;&#x2F;a&gt; from Bazel on protobuf
+is from 2017!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;The work &lt;a href=&quot;https:&#x2F;&#x2F;www.aspect.build&#x2F;&quot;&gt;Aspect Build&lt;&#x2F;a&gt; is doing to improve the protobuf ecosystem is great as well.
+Their video series on &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=s0i_Ra_mG9U&quot;&gt;&lt;em&gt;“Never Compile Protoc Again”&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; is excellent
+and served as a great resource for my previous post on &lt;a href=&quot;&#x2F;2024&#x2F;10&#x2F;23&#x2F;bazel-knowledge-mind-your-path.html&quot;&gt;minding your PATH&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>https://tech.j4m3s.eu/posts/git-filter-scripts//planet.tvl.fyi</id>
+      <title>Protect Your Sensitive Files in Git Repos: A Guide to Git Filters and age</title>
+      
+        <link href="https://tech.j4m3s.eu/posts/git-filter-scripts/" />
+      
+      
+        <updated>2024-11-10T16:28:42Z</updated>
+      
+      
+        <published>2024-11-10T16:28:42Z</published>
+      
+      <summary>
+          This blog post explores how to leverage Git clean&#x2F;smudge filters alongside the age encryption tool to securely manage sensitive files in Git repositories. Git filters allow developers to preprocess files automatically, making them perfect for encrypting confidential data (e.g., API keys, configuration files) before committing to a repo and decrypting them upon checkout.
+        </summary>
+      
+      </entry>
+  
+    <entry>
+      <id>https://fzakaria.com/2024/11/08/jvm-boot-optimization-via-javaindex/planet.tvl.fyi</id>
+      <title>JVM boot optimization via JavaIndex</title>
+      
+        <link href="https://fzakaria.com/2024/11/08/jvm-boot-optimization-via-javaindex.html" rel="alternate"/>
+      
+      
+        <updated>2024-11-08T22:01:00Z</updated>
+      
+      
+        <published>2024-11-08T22:01:00Z</published>
+      
+      <summary>
+          Ever heard of a JarIndex? I had been doing JVM development for 10+ years and I hadn’t. Read on to discover what it is and how it can speedup your compilation and boot time. 🤓 After having worked on Shrinkwrap and publishing our results in Mapping Out the HPC Dependency Chaos, you start to see the Linux environment as a bit of an oddball. Everything in Linux is structured around O(n) or O(n^2) search and lookup. This feels now unsurprising given that everything in Linux searches across colon separate lists (i.e. LD_LIBRARY_PATH, RUN_PATH). This idiom however is even more pervasive and has bled into all of our language. The JVM for instance, must search for classes amongst a set of directories, files or JARs set on the CLASS_PATH.
+        </summary>
+      
+        <author>
+          <name>unknown</name>
+          </author>
+        
+      <content  >
+          &lt;p&gt;&lt;em&gt;Ever heard of a JarIndex? I had been doing JVM development for 10+ years and I hadn’t. Read on to discover what it is and how it can speedup your compilation and boot time.&lt;&#x2F;em&gt; 🤓&lt;&#x2F;p&gt;
+
+&lt;p&gt;After having worked on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fzakaria&#x2F;shrinkwrap&quot;&gt;Shrinkwrap&lt;&#x2F;a&gt; and publishing our results in &lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2211.05118&quot;&gt;Mapping Out the HPC Dependency Chaos&lt;&#x2F;a&gt;, you start
+to see the Linux environment as a bit of an oddball.&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;em&gt;Everything in Linux is structured around O(n) or O(n^2) search and lookup&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;This feels now unsurprising given that everything in Linux searches across colon separate lists (i.e. &lt;em&gt;LD_LIBRARY_PATH&lt;&#x2F;em&gt;, &lt;em&gt;RUN_PATH&lt;&#x2F;em&gt;).
+This idiom however is even more pervasive and has bled into all of our language.&lt;&#x2F;p&gt;
+
+&lt;p&gt;The JVM for instance, must search for classes amongst a set of directories, files or JARs set on the &lt;em&gt;CLASS_PATH&lt;&#x2F;em&gt;.
+&lt;!--more--&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Everytime the JVM needs to load a class file, it must perform a linear search along all entries in the &lt;em&gt;CLASS_PATH&lt;&#x2F;em&gt;.
+Thanksfully, if the entries are directories or JARs, no subsequent search must be performed since the package name of a class dictates the directory structure
+that must exist.&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io.fzakaria.Example&lt;&#x2F;code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;io&#x2F;fzakaria&#x2F;Example.class&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Nevertheless, the &lt;em&gt;CLASS_PATH&lt;&#x2F;em&gt; size can be large. 
+At &lt;em&gt;$DAY_JOB$&lt;&#x2F;em&gt;, almost all of our services launch with +300 entries (JARs) on the ClassPath.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Large enterprise codebases may feature over a thousand ClassPath entries. 😮&lt;&#x2F;p&gt;
+
+&lt;p&gt;A large ClassPath means that the JavaVirtualMachine (JVM) needs to search entry for the desired class.
+This not only affects startup time for your application, &lt;em&gt;on every startup, repeatedly&lt;&#x2F;em&gt;, but also compilation as well via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;javac&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;The authors of the JVM already knew about this problem, especially when the idea of Java Applets were dominant. Each JAR on the ClassPath
+would have been fetched via HTTP and would cause unbearable slowdown for startup.&lt;&#x2F;p&gt;
+
+&lt;p&gt;The JDK has support for a &lt;em&gt;JarIndex&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;A &lt;em&gt;JarIndex&lt;&#x2F;em&gt;, is a JAR which has a special file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;INDEX.LIST&lt;&#x2F;code&gt; that effectively contains an index of all JARs on the ClassPath and the packages found within.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JarIndex-Version: 1.0
+
+libMain.jar
+Main.class
+
+lib&#x2F;libA.jar
+A.class
+
+lib&#x2F;libB.jar
+B.class
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Whenever a class must be searched rather than searching through the &lt;em&gt;CLASS_PATH&lt;&#x2F;em&gt;, the index file is used leading to constant-time lookup for classes.&lt;&#x2F;p&gt;
+
+&lt;p&gt;This seemingly powerful primitive confusingly has been deprecated and ultimately removed in JDK22 (&lt;a href=&quot;https:&#x2F;&#x2F;bugs.openjdk.org&#x2F;browse&#x2F;JDK-8302819&quot;&gt;JDK-8302819&lt;&#x2F;a&gt;) 🤔 – citing challenges when having to support a broad ranges of topics such as Multi-Version JARs.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Unsuprisingly, I think this feature would be an easy fit into Bazel, Spack or Nix – as there are a lot more constraints on the type of JARs that need be supported.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I put together a small &lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;fzakaria&#x2F;4e98f65be96cf7f8b13081e75d7a2bf8&quot;&gt;gist&lt;&#x2F;a&gt; on what this support might look like.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;_jar_index_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;java_info&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;src&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;JavaInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;java_runtime&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;_java_runtime&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_common&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;JavaRuntimeInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;java_home&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_runtime&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_home&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;jar_bin&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%s&#x2F;bin&#x2F;jar&quot;&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_home&lt;&#x2F;span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;runtime_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;jar&lt;&#x2F;span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_info&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;transitive_runtime_jars&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;to_list&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;runtime_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;jar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;&#x2F;span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;cmds&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;%s -i %s %s&quot;&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;jar_bin&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_info&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_outputs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;class_jar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;runtime_jars&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;cp %s %s&quot;&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_info&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_outputs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;class_jar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;outputs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;run_shell&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;inputs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_info&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_outputs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;class_jar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_info&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;transitive_runtime_jars&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;to_list&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;outputs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;outputs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;tools&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;java_runtime&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;files&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;command&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;;&lt;&#x2F;span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;cmds&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;DefaultInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;files&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;outputs&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;])),&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;jar_index&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;_jar_index_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;attrs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;src&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;mandatory&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;providers&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;JavaInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+        &lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;_java_runtime&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;default&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;@bazel_tools&#x2F;&#x2F;tools&#x2F;jdk:current_java_runtime&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;providers&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;java_common&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;JavaRuntimeInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+        &lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;outputs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;index&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;%{name}_index.jar&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Further improvements can be made, to give this index-like support to the Java compiler itself and not only for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java_binary&lt;&#x2F;code&gt; targets.&lt;&#x2F;p&gt;
+
+&lt;p&gt;We’ve gone out of our way on these systems to define our inputs, enforce contraints and model our dependencies. Not taking advantage of
+this stability and regressing to the default search often found in our tooling is leaving easy performance improvements on the floor.&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+</feed>
