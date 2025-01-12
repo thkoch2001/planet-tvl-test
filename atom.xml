@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Planet TVL</title>
   <link href="https::/planet.tvl.fyi"/>
-  <updated>2025-01-12T11:17:12Z</updated>
+  <updated>2025-01-12T20:14:37Z</updated>
   <id>https::/planet.tvl.fyi</id>
   <generator uri="https:&#x2F;&#x2F;github.com&#x2F;thkoch2001&#x2F;planet-mars" version="0.1.0">
     planet-mars by Thomas Koch &lt;thomas@koch.ro&gt;
@@ -54,6 +54,60 @@
           </author>
         <uri></uri>
         
+      </entry>
+  
+    <entry>
+      <id>https://blog.koch.ro/posts/2025-01-05-epiphany-38c3-sixos-talk.html/planet.tvl.fyi</id>
+      <title>Epiphany from 38c3 sixos talk</title>
+      
+        <link href="https://blog.koch.ro/posts/2025-01-05-epiphany-38c3-sixos-talk.html" rel="alternate"/>
+      
+      
+        <updated>2025-01-05T00:00:00Z</updated>
+      
+      
+        <published>2025-01-05T00:00:00Z</published>
+      
+      <summary>
+          &lt;div class=&quot;info&quot;&gt;
+    Posted on January  5, 2025
+    
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;info&quot;&gt;
+    
+    Tags: &lt;a title=&quot;All pages tagged &amp;#39;debian&amp;#39;.&quot; href=&quot;&#x2F;tags&#x2F;debian.html&quot;&gt;debian&lt;&#x2F;a&gt;, &lt;a title=&quot;All pages tagged &amp;#39;nix&amp;#39;.&quot; href=&quot;&#x2F;tags&#x2F;nix.html&quot;&gt;nix&lt;&#x2F;a&gt;
+    
+&lt;&#x2F;div&gt;
+
+&lt;p&gt;There are so many new insights from this talk, that I need to pin them down.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;media.ccc.de&#x2F;v&#x2F;38c3-sixos-a-nix-os-without-systemd&quot;&gt;sixos: a nix os without systemd&lt;&#x2F;a&gt; by Adam Joseph (&lt;a href=&quot;https:&#x2F;&#x2F;events.ccc.de&#x2F;congress&#x2F;2024&#x2F;hub&#x2F;de&#x2F;event&#x2F;sixos-a-nix-os-without-systemd&#x2F;&quot;&gt;Fahrplan&lt;&#x2F;a&gt;)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;amjoseph&#x2F;sixos&quot;&gt;sixos&lt;&#x2F;a&gt; is much like &lt;a href=&quot;https:&#x2F;&#x2F;nixos.org&quot;&gt;NixOS&lt;&#x2F;a&gt; but uses &lt;a href=&quot;https:&#x2F;&#x2F;www.skarnet.org&#x2F;software&#x2F;s6&#x2F;overview.html&quot;&gt;s6&lt;&#x2F;a&gt; instead of systemd and an alternative configuration mechanism for services called “&lt;a href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;amjoseph&#x2F;infuse.nix&quot;&gt;infusion&lt;&#x2F;a&gt;” instead of nixos’ modules. s6 is a set of small tools that together provide the functionality of process supervision, service dependency mangagement and more.&lt;&#x2F;p&gt;
+&lt;p&gt;The s6 site provides A LOT of insight about how to do all of this conforming to the UNIX philosophy. Especially new and interesting to me were the bits about “chain loading” and this &lt;a href=&quot;https:&#x2F;&#x2F;skarnet.org&#x2F;lists&#x2F;supervision&#x2F;0422.html&quot;&gt;rant about systemd&lt;&#x2F;a&gt;. The latter finally convinced me, that systemd is a bad thing and that I should try to get rid of it. - Sorry for being a bit late to the party.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve a dream of creating a replacement for kubernetes. I don’t need such a thing right now, but it would heal some post-traumatic syndroms after two years of kubernetes support. The small and simple tools from s6 together with nix would already cover a lot of ground.&lt;&#x2F;p&gt;
+&lt;p&gt;More interesting bits discoverd:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;“chain loading” aka “&lt;a href=&quot;http:&#x2F;&#x2F;www.catb.org&#x2F;~esr&#x2F;writings&#x2F;taoup&#x2F;html&#x2F;ch06s06.html&quot;&gt;Bernstein chaining&lt;&#x2F;a&gt;” are terms to describe a chain of processes exec’ing into each other. I didn’t know there are names for this. It’s actually so powerful that one can build a programming language on top of it: &lt;a href=&quot;https:&#x2F;&#x2F;skarnet.org&#x2F;software&#x2F;execline&#x2F;grammar.html&quot;&gt;execline&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;illiliti&#x2F;libudev-zero&quot;&gt;libudev-zero&lt;&#x2F;a&gt; - daemonless replacement for libudev
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;illiliti&#x2F;respectful-software&quot;&gt;respectful-software&lt;&#x2F;a&gt; - alternatives to CoCs and CLAs and more good advice&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;kisscommunity.bvnf.space&#x2F;&quot;&gt;KISS Linux Community&lt;&#x2F;a&gt; - I love KISS&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.brain-dump.org&#x2F;projects&#x2F;abduco&#x2F;&quot;&gt;abduco&lt;&#x2F;a&gt; - lighter alternative to SCREEN and TMUX&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This find quote I want to learn by heart:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“If the users don’t control the program, the program controls the users. With proprietary software, there is always some entity, the “owner” of the program, that controls the program and through it, exercises power over its users. A nonfree program is a yoke, an instrument of unjust power.” — Richard Stallman&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;1&lt;&#x2F;sup&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;There is no hint to any communication channel for discussions about sixos. But Adam pointed to the &lt;a href=&quot;https:&#x2F;&#x2F;tvl.fyi&quot;&gt;tvl&lt;&#x2F;a&gt; channel on &lt;a href=&quot;https:&#x2F;&#x2F;hackint.org&quot;&gt;hackint&lt;&#x2F;a&gt; during his talk for people interested in improving Nix and he is actually operator of a channel #six on hackint. He is amjoseph on IRC.&lt;&#x2F;p&gt;
+&lt;p&gt;Now I’m just curious whether there is a story behind the slogan “ca-bundle.crt is malware” that Adam had on his shirt during the talk.&lt;&#x2F;p&gt;
+&lt;section class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+&lt;hr &#x2F;&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot; role=&quot;doc-endnote&quot;&gt;&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;stallman-programs-controlling-users&quot;&gt;https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;stallman-programs-controlling-users&lt;&#x2F;a&gt;&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+        </summary>
+      
       </entry>
   
     <entry>
@@ -1020,6 +1074,736 @@ B.class
 
 &lt;p&gt;We’ve gone out of our way on these systems to define our inputs, enforce contraints and model our dependencies. Not taking advantage of
 this stability and regressing to the default search often found in our tooling is leaving easy performance improvements on the floor.&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>tag:chneukirchen@yahoo.de,2004-06:chris-blogs-x-20241106-214737/planet.tvl.fyi</id>
+      <title>Problem Solving with Answer Set Programming</title>
+      
+        <link href="https://leahneukirchen.org/blog/archive/2024/11/problem-solving-with-answer-set-programming.html" rel="alternate"/>
+      
+      
+        <updated>2024-11-06T21:47:37Z</updated>
+      
+      
+        <published>2024-11-06T21:47:37Z</published>
+      
+      
+        <author>
+          <name>Leah Neukirchen</name>
+          <email>leah@vuxu.org</email>
+          </author>
+        <uri>https://leahneukirchen.org/</uri>
+        
+      <content  >
+          &lt;p&gt;A few months ago I found an article on how to
+&lt;a href=&quot;https:&#x2F;&#x2F;alt-romes.github.io&#x2F;posts&#x2F;2024-08-14-planning-a-workout-week-with-100-lines-of-haskell.html&quot;&gt;organize your training plan using logic programming&lt;&#x2F;a&gt;,
+which used Haskell to implement a logic language.&lt;&#x2F;p&gt;
+&lt;p&gt;At first, I thought this is a good problem to solve in Prolog, but
+there’s a difficulty: Prolog makes it quite hard to specify models
+that have multiple possible outcomes (yes, you can work with backtracking, but
+it gets tricky when you start to combine multiple predicates or fiddle
+around with &lt;code&gt;bagof&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;An alternative to classic Prolog is the concept of Answer Set
+Programming, based on the &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.utexas.edu&#x2F;~ai-lab&#x2F;?gel88=&quot;&gt;Stable Model Semantics by Gelfond and
+Lifschitz&lt;&#x2F;a&gt; (1988).  Here,
+the idea is that the logical formulas specify models, and the goal of
+Answer Set Programming is to compute the Answer Sets, i.e. a set of
+models fulfilling the formulas.&lt;&#x2F;p&gt;
+&lt;p&gt;I can’t do a full introduction to Answer Set Programming here,
+but I can recommend the overview article &lt;a href=&quot;https:&#x2F;&#x2F;dl.acm.org&#x2F;doi&#x2F;10.1145&#x2F;2043174.2043195&quot;&gt;Answer set programming at a glance&lt;&#x2F;a&gt; by Brewka et. al.,
+as well as
+the short article &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.utexas.edu&#x2F;~vl&#x2F;papers&#x2F;wiasp.pdf&quot;&gt;What Is Answer Set Programming?&lt;&#x2F;a&gt;
+and the book &lt;a href=&quot;https:&#x2F;&#x2F;link.springer.com&#x2F;book&#x2F;10.1007&#x2F;978-3-030-24658-7&quot;&gt;Answer Set Programming&lt;&#x2F;a&gt; by Lifschitz.&lt;&#x2F;p&gt;
+&lt;h4&gt;So what is a stable model?&lt;&#x2F;h4&gt;
+&lt;p&gt;Essentially, we can think of a stable model as a maximal set of atoms
+that are true (derivable from the rules) without being in conflict to
+other propositions.  If we don’t use negation, that pretty boring&lt;&#x2F;p&gt;
+&lt;p&gt;However, consider this logic program:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;q :- not p.
+p :- not q.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Contrary to what you may expect, it has two models: {p} and {q}.
+This is because ASP uses default negation, which means “not A” is
+assumed to hold unless A is derived.
+Both cannot be true at the same time, but likewise the empty set
+is not a model because it can be extended to {p} or {q}.&lt;&#x2F;p&gt;
+&lt;p&gt;The program &lt;code&gt;p :- not not p.&lt;&#x2F;code&gt; has two models, {} and {p}.&lt;&#x2F;p&gt;
+&lt;p&gt;Let’s do a small problem first so we get a feel for the tooling.  I
+chose to use &lt;a href=&quot;https:&#x2F;&#x2F;potassco.org&#x2F;clingo&#x2F;&quot;&gt;clingo&lt;&#x2F;a&gt;, which is the most
+advanced open source implementation of Answer Set Programming.&lt;&#x2F;p&gt;
+&lt;p&gt;If your distribution doesn’t include it, you can run it from Nix:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;nix shell nixpkgs#clingo
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let’s model a directed graph with four nodes:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;edge(a,b).
+edge(a,c).
+edge(b,d).
+edge(c,d).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Our problem is to find paths from &lt;code&gt;a&lt;&#x2F;code&gt; to &lt;code&gt;d&lt;&#x2F;code&gt;.  We can define a
+relation &lt;code&gt;step&lt;&#x2F;code&gt;, which either means “we can step from X to &lt;code&gt;d&lt;&#x2F;code&gt;”
+or “we can step from X to Y when there’s an edge from X to Y and
+another step from Y”:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;0 { step(X,E) } 1 :- edge(X,E), E = d.
+0 { step(X,Y) } 1 :- edge(X,Y), step(Y,_).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;0 { ... } 1&lt;&#x2F;code&gt; decoration means that each step can be taken at most once.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we need to specify our goal, which in tradition of logic
+programming, is written as a negation:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;:- not step(a,_).
+#show step&#x2F;2.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This means “it is not the case that there’s no step starting from &lt;code&gt;a&lt;&#x2F;code&gt;”.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;code&gt;#show&lt;&#x2F;code&gt; instructions limits clingo to only output the binary
+&lt;code&gt;step&lt;&#x2F;code&gt; relation.  Let’s run it:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;% gringo graph.pl | clasp    
+clasp version 3.3.10
+Reading from stdin
+Solving...
+Answer: 1
+step(b,d) step(a,b)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Clingo has found a solution.  We can go from &lt;code&gt;a&lt;&#x2F;code&gt; to &lt;code&gt;b&lt;&#x2F;code&gt; and from &lt;code&gt;b&lt;&#x2F;code&gt; to &lt;code&gt;d&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;We can also ask for all solutions, by passing &lt;code&gt;-n0&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;% gringo graph.pl | clasp -n0
+clasp version 3.3.10
+Reading from stdin
+Solving...
+Answer: 1
+step(b,d) step(a,b)
+Answer: 2
+step(c,d) step(b,d) step(a,b)
+Answer: 3
+step(c,d) step(a,c)
+Answer: 4
+step(c,d) step(b,d) step(a,c)
+Answer: 5
+step(c,d) step(b,d) step(a,b) step(a,c)
+SATISFIABLE
+
+Models       : 5
+Calls        : 1
+Time         : 0.000s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here we see there are five possible models of this system (but every
+model except the first and the third has superflous steps).&lt;&#x2F;p&gt;
+&lt;p&gt;To see why the &lt;code&gt;0 { ... } 1&lt;&#x2F;code&gt; matters, here’s what happens without it:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Answer: 1
+step(b,d) step(c,d) step(a,b) step(a,c)
+SATISFIABLE
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now there is only one model, but it contains all paths.
+Cardinality bounds are implemented using negation internally.&lt;&#x2F;p&gt;
+&lt;h4&gt;Planning Weekly Workouts in 30 lines of ASP&lt;&#x2F;h4&gt;
+&lt;p&gt;Back to the original task:
+&lt;a href=&quot;https:&#x2F;&#x2F;alt-romes.github.io&#x2F;posts&#x2F;2024-08-14-planning-a-workout-week-with-100-lines-of-haskell.html&quot;&gt;Planning Weekly Workouts in 100 lines of Haskell&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The goal is to create a weekly plan of training exercises according to
+some specific rules.&lt;&#x2F;p&gt;
+&lt;p&gt;First, we need some definitions related to weekdays:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;weekday(1..7).
+
+n_weekday(D, DD)  :- weekday(D), weekday(DD), (D+1) \ 7 == DD \ 7.
+nn_weekday(D, DD) :- weekday(D), weekday(DD), (D+2) \ 7 == DD \ 7.
+
+two_weekday(D, DD) :- n_weekday(D, DD).
+two_weekday(D, DD) :- nn_weekday(D, DD).
+two_weekday(D, DD) :- two_weekday(DD, D).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is a bit more complicated because we later need “day after”
+and “within two days”.  (&lt;code&gt;\&lt;&#x2F;code&gt; means modulo.)&lt;&#x2F;p&gt;
+&lt;p&gt;Now, let’s define workout and running exercises:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;workout(push; pull; leg; none).
+running(long; short; none).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To the plan: each weekday has one workout and one running exercise:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;{ plan(D,W,R) : workout(W), running(R) } = 1 :- weekday(D).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We then add the constraints:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;% No running on leg day
+plan(D, leg, none) :- plan(D, leg, _).
+
+% Short intervals run is after an outdoor pull&#x2F;push workout
+:- plan(_, none, short).
+
+% Workout on Monday outdoors always, not legs
+:- plan(1, none, _).
+:- plan(1, leg, _).
+
+% Pull day during the week?
+:- plan(6..7, pull, _).
+
+% One long run, one short run
+{ plan(D,W,long) : weekday(D), workout(W) } = 1.
+{ plan(D,W,short) : weekday(D), workout(W) } = 1.
+
+% Two push, two pull, two leg
+:- not { plan(D,push,R) } = 2.
+:- not { plan(D,pull,R) } = 2.
+:- not { plan(D,leg,R) } = 2.
+
+% Long run on weekend
+{ plan(6..7,W,long) : workout(W) } = 1.
+
+% Run spaced out at least 2 days
+:- plan(D,_,short), plan(DD,_,long), two_weekday(D, DD).
+
+% Space out workouts at least 2 days
+:- plan(D,W,_), plan(DD,W,_), W != none, two_weekday(D, DD).
+
+% No leg day before short run
+% No leg day before a long run
+{ plan(D,W,R) : running(R), R != none, workout(W), plan(DD,leg,_), n_weekday(D, DD) } = 1.
+
+#show plan&#x2F;3.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;clingo generates the same three plans as the Haskell program:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Solving...
+Answer: 1
+plan(5,leg,none) plan(2,leg,none) plan(1,pull,none) plan(3,push,none) plan(4,pull,short) plan(6,push,none) plan(7,none,long)
+Answer: 2
+plan(5,leg,none) plan(2,leg,none) plan(1,pull,none) plan(3,push,none) plan(4,pull,short) plan(6,none,none) plan(7,push,long)
+Answer: 3
+plan(7,leg,none) plan(4,leg,none) plan(1,pull,none) plan(2,push,short) plan(3,none,none) plan(5,pull,none) plan(6,push,long)
+SATISFIABLE
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4&gt;Answer Set Programming against heteronormativity&lt;&#x2F;h4&gt;
+&lt;p&gt;The next problem I solved using ASP was a silly exercise from
+a statistics book
+(Lehn, Wegmann, Rettig: Aufgabensammlung zur Einführung in die Statistik),
+translation mine:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Exercise 11c) Ten French married couples bid goodbye to each other:
+the men with the men by shaking hands, the women with the women by
+kisses on both cheeks, and women with the men likewise by kisses on
+both cheeks.  How many kisses and how many handshakes take place?&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The implicit assumption of the exercise is that all married couples
+consist of a man and a woman, but it’s more fun to solve it in a
+generic way.  So let’s do that using ASP.&lt;&#x2F;p&gt;
+&lt;p&gt;First, we model the people and their fixed binary gender (more assumptions,
+but else the exercise is truly underspecified):&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;person(0..19).
+gender(man; woman).
+{ gender(P, G) : gender(G) } = 1 :- person(P).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I decided to model a couple using an even and odd numbered person:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;couple(A, B) :- person(A), person(B), A != B, A&#x2F;2 == B&#x2F;2.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Next, we model the handshakes.  Two people shake hands if they are not
+part of the same couple, and both are men:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;handshake(A, B) :- person(A), person(B), A &amp;lt; B, not couple(A, B), gender(A, man), gender(B, man).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;A &amp;lt; B&lt;&#x2F;code&gt; ensures we only count one handshake between two men,
+as handshaking is a symmetric act.&lt;&#x2F;p&gt;
+&lt;p&gt;We also count the handshakes:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;handshakes(N) :- N = #count { handshakes(A, B) : handshake(A, B) }.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Likewise, two kisses happen between two persons not in the same couple
+where one is a woman.  Note that kisses are asymmetric since they go
+from mouth to cheek (this cost me an hour of debugging…):&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;kiss(A, B) :- person(A), person(B), not A == B, not couple(A, B), gender(A, woman).
+kiss(A, B) :- person(A), person(B), not A == B, not couple(A, B), gender(B, woman).
+kisses(N) :- H = #count { kisses(A, B) : kiss(A, B) }, N = H * 2.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Finally, we also count men and women for reporting purposes:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;men(N) :- N = #count { g(P) : gender(P, man) }.
+women(N) :- N = #count { g(P) : gender(P, woman) }.
+
+#show handshakes&#x2F;1.
+#show kisses&#x2F;1.
+#show men&#x2F;1.
+#show women&#x2F;1.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Thanks to clingo’s parallelization support, we can compute all
+possible 2&lt;sup&gt;20&lt;&#x2F;sup&gt; solutions very quickly:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Solving...
+Answer: 1
+women(0) men(20) kisses(0) handshakes(180)
+Answer: 2
+women(1) men(19) kisses(72) handshakes(162)
+Answer: 3
+women(1) men(19) kisses(72) handshakes(162)
+...
+Answer: 1048576
+women(12) men(8) kisses(616) handshakes(26)
+SATISFIABLE
+
+Models       : 1048576
+Calls        : 1
+Time         : 51.163s (Solving: 51.00s 1st Model: 0.10s Unsat: 0.01s)
+CPU Time     : 463.811s
+Threads      : 16       (Winner: 0)
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We can also specialize the model to have only hetero couples:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;:- Z = 0..9, not gender(2*Z, man).
+:- Z = 0..9, not gender(2*Z+1, woman).
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then we get the unique solution:&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;Solving...
+Answer: 1
+women(10) men(10) kisses(540) handshakes(45)
+SATISFIABLE
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I hope this post could interest you in how Answer Set Programming can be used.
+Some more interesting programs can be found on
+&lt;a href=&quot;http:&#x2F;&#x2F;www.hakank.org&#x2F;constraint_programming_blog&#x2F;answer_set_programming&#x2F;&quot;&gt;Hakan Kjellerstrand’s blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>https://fzakaria.com/2024/10/29/bazel-knowledge-what-s-an-interface-jar/planet.tvl.fyi</id>
+      <title>Bazel Knowledge: What’s an Interface JAR?</title>
+      
+        <link href="https://fzakaria.com/2024/10/29/bazel-knowledge-what-s-an-interface-jar.html" rel="alternate"/>
+      
+      
+        <updated>2024-10-30T02:34:00Z</updated>
+      
+      
+        <published>2024-10-30T02:34:00Z</published>
+      
+      <summary>
+          I spent the day working through an upgrade of our codebase at $DAYJOB$ to Java21 and hit Bazel issue#24138 as a result of an incorrectly produced hjar. 🤨 WTF is an hjar ? ☝️ It is the newer version of ijar ! 😠 WTF is an ijar ? Let’s discover what an ijar (Interface JAR) is and how it’s the magic sauce that makes Bazel so fast for Java.
+        </summary>
+      
+        <author>
+          <name>unknown</name>
+          </author>
+        
+      <content  >
+          &lt;p&gt;I spent the day working through an upgrade of our codebase at &lt;em&gt;$DAYJOB$&lt;&#x2F;em&gt; to Java21 and hit Bazel &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;bazel&#x2F;issues&#x2F;24138&quot;&gt;issue#24138&lt;&#x2F;a&gt; as a result of an incorrectly produced &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hjar&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;🤨
+&lt;em&gt;WTF is an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hjar&lt;&#x2F;code&gt; ?&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;☝️ &lt;em&gt;It is the newer version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; !&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;😠
+&lt;em&gt;WTF is an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; ?&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Let’s discover what an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; (Interface JAR) is and how it’s the &lt;em&gt;magic sauce&lt;&#x2F;em&gt; that makes Bazel so fast for Java.&lt;&#x2F;p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Let’s consider a simple Makefile&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-make highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;program&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;main.o utils.o&lt;&#x2F;span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$(CC)&lt;&#x2F;span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;&#x2F;span&gt; program main.o utils.o
+
+&lt;span class=&quot;nl&quot;&gt;main.o&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;main.c utils.h&lt;&#x2F;span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$(CC)&lt;&#x2F;span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;&#x2F;span&gt; main.c
+
+&lt;span class=&quot;nl&quot;&gt;utils.o&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;utils.c utils.h&lt;&#x2F;span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$(CC)&lt;&#x2F;span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;&#x2F;span&gt; utils.c
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;We’ve been taught to make use of &lt;em&gt;header files&lt;&#x2F;em&gt;, especially in C&#x2F;C++ so that we can avoid recompilation as a form of &lt;em&gt;early cutoff optimization&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;☝️ If we change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;utils.c&lt;&#x2F;code&gt; solely, we do not have to recompile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.o&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;We can visualize this Makefile in the following graph.&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;images&#x2F;makefile_as_graph.svg&quot; alt=&quot;Makefile as a graph&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Ok, great! What does this have to do with Java &amp;amp; Bazel ?&lt;&#x2F;p&gt;
+
+&lt;p&gt;Well, let’s remember back to my previous post on &lt;a href=&quot;&#x2F;2024&#x2F;09&#x2F;26&#x2F;bazel-knowledge-reproducible-outputs.html&quot;&gt;reproducible outputs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Bazel constructs a similar graph to determine when to do &lt;em&gt;early cutoff optimization&lt;&#x2F;em&gt; through the “Action Key”. Bazel computes a hash for each action, that takes dependencies for instance, and if the hash hasn’t changed it can memoize the work.&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;images&#x2F;action_graph_bazel.png&quot; alt=&quot;Bazel Action Graph&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;In Java-world, dependencies are expressed as JARs.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Wouldn’t private-only changes to a dependency (i.e. renaming a private variable) cause the Action Key HASH to change (since it produced a different JAR) ?&lt;&#x2F;p&gt;
+
+&lt;p&gt;🤓 YES! That is why we need an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; !&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; is a tool found within the Bazel repository &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;bazel&#x2F;blob&#x2F;master&#x2F;third_party&#x2F;ijar&#x2F;README.txt&quot;&gt;bazel&#x2F;third_party&#x2F;ijar&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;You can build and run it fairly simple with Bazel&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;bazel run &#x2F;&#x2F;third_party&#x2F;ijar
+Usage: ijar &lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;nt&quot;&gt;-v&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;no]strip_jar] &lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;nt&quot;&gt;--target&lt;&#x2F;span&gt; label label] &lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;nt&quot;&gt;--injecting_rule_kind&lt;&#x2F;span&gt; kind] x.jar &lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;x_interface.j
+ar&amp;gt;]
+Creates an interface jar from the specified jar file.
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;It’s purpose is straightforward. The tool strips all non-public information from the JAR. For example, it throws away:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Files whose name does not end in “.class”.&lt;&#x2F;li&gt;
+  &lt;li&gt;All executable method code.&lt;&#x2F;li&gt;
+  &lt;li&gt;All private methods and fields.&lt;&#x2F;li&gt;
+  &lt;li&gt;All constants and attributes except the minimal set necessary to describe the class interface.&lt;&#x2F;li&gt;
+  &lt;li&gt;All debugging information
+(LineNumberTable, SourceFile, LocalVariableTables attributes).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+&lt;p&gt;The end result is something in spirit to a C&#x2F;C++ header file.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Let’s see it in practice. 🕵️&lt;&#x2F;p&gt;
+
+&lt;p&gt;Let’s now create an incredibly simple JAR. It will have a single class file within it.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;&#x2F;span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;&#x2F;span&gt; &lt;span class=&quot;nc&quot;&gt;Banana&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;&#x2F;span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;&#x2F;span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;peel&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;&#x2F;span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Peeling the banana...&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;squish&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;&#x2F;span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;&#x2F;span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;&#x2F;span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;squish&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;&#x2F;span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Squish! The banana got squashed.&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;&#x2F;span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;&#x2F;span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;We compile it like usual.&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;javac Banana.java
+&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;jar cf banana.jar Banana.class
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;When we run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; on it we get the hash &lt;em&gt;e18e0ae82bdc4deb04f04aa&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;⚠️ I shortened the hashes to make them more legible.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;bazel-bin&#x2F;third_party&#x2F;ijar&#x2F;ijar banana.jar
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;sha256sum &lt;&#x2F;span&gt;banana.jar
+f813749013ea6aba2e00876  banana.jar
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;sha256sum &lt;&#x2F;span&gt;banana-interface.jar
+e18e0ae82bdc4deb04f04aa  banana-interface.jar
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Let’s now change the internals of the &lt;em&gt;Banana&lt;&#x2F;em&gt; class; let’s rename the method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;squish()&lt;&#x2F;code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;squash()&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Let’s recompute the new sha256.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;sha256sum &lt;&#x2F;span&gt;banana.jar
+9278282827ddb55c68eb370 banana.jar
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;sha256sum &lt;&#x2F;span&gt;banana-interface.jar
+e18e0ae82bdc4deb04f04aa  banana-interface.jar
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;🤯 Although the hash of &lt;em&gt;banana.jar&lt;&#x2F;em&gt; had changed, we still get &lt;em&gt;e18e0ae82bdc4deb04f04aa&lt;&#x2F;em&gt; for the ijar.&lt;&#x2F;p&gt;
+
+&lt;p&gt;We now the equivalent of a header file for Java code.  🙌&lt;&#x2F;p&gt;
+
+&lt;p&gt;Bazel will use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ijar&lt;&#x2F;code&gt; when computing the Action Key hash in lieu of the JAR for the dependencies you may depend on; thus avoiding costly rebuilds when only private information changes within your dependency.&lt;&#x2F;p&gt;
+
+&lt;p&gt;This is the amazing lesser known tool that makes Bazel super-powered 🦸 for JVM languages.&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>https://fzakaria.com/2024/10/23/bazel-knowledge-mind-your-path/planet.tvl.fyi</id>
+      <title>Bazel Knowledge: mind your PATH</title>
+      
+        <link href="https://fzakaria.com/2024/10/23/bazel-knowledge-mind-your-path.html" rel="alternate"/>
+      
+      
+        <updated>2024-10-23T22:37:00Z</updated>
+      
+      
+        <published>2024-10-23T22:37:00Z</published>
+      
+      <summary>
+          Have you encountered the following? &amp;gt; bazel build INFO: Invocation ID: f16c3f83-0150-494e-bd34-1a9cfb6a2e67 WARNING: Build option --incompatible_strict_action_env has changed, discarding analysis cache (this can be expensive, see https:&#x2F;&#x2F;bazel.build&#x2F;advanced&#x2F;performance&#x2F;iteration-speed). INFO: Analyzed target @@com_google_protobuf&#x2F;&#x2F;:protoc (113 packages loaded, 1377 targets configured). [483 &#x2F; 845] 13 actions, 12 running Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;importer.cc; 3s disk-cache, darwin-sandbox Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;java&#x2F;names.cc; 1s disk-cache, darwin-sandbox Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;java&#x2F;name_resolver.cc; 1s disk-cache, darwin-sandbox Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;java&#x2F;helpers.cc; 1s disk-cache, darwin-sandbox Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;objectivec&#x2F;enum.cc; 1s disk-cache, darwin-sandbox Compiling absl&#x2F;strings&#x2F;cord.cc; 1s disk-cache, darwin-sandbox Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;objectivec&#x2F;names.cc; 0s disk-cache, darwin-sandbox Compiling absl&#x2F;time&#x2F;internal&#x2F;cctz&#x2F;src&#x2F;time_zone_lookup.cc; 0s disk-cache, darwin-sandbox ... I finally had it with Bazel recompiling protoc 😤 The working title for this post: Why the #$@! does protoc keep recompiling! 🤬 If you are not interested in the story and just want to avoid recompiling protoc, try putting build --incompatible_strict_action_env in your .bazelrc. Checkout Aspect’s bazelrc guide for other good tidbits.
+        </summary>
+      
+        <author>
+          <name>unknown</name>
+          </author>
+        
+      <content  >
+          &lt;p&gt;Have you encountered the following?&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; bazel build
+INFO: Invocation ID: f16c3f83-0150-494e-bd34-1a9cfb6a2e67
+WARNING: Build option &lt;span class=&quot;nt&quot;&gt;--incompatible_strict_action_env&lt;&#x2F;span&gt; has changed, discarding analysis cache &lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;this can be expensive, see https:&#x2F;&#x2F;bazel.build&#x2F;advanced&#x2F;performance&#x2F;iteration-speed&lt;span class=&quot;o&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;&#x2F;span&gt;
+INFO: Analyzed target @@com_google_protobuf&#x2F;&#x2F;:protoc &lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;113 packages loaded, 1377 targets configured&lt;span class=&quot;o&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;&#x2F;span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;&#x2F;span&gt;483 &#x2F; 845] 13 actions, 12 running
+    Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;importer.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 3s disk-cache, darwin-sandbox
+    Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;java&#x2F;names.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 1s disk-cache, darwin-sandbox
+    Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;java&#x2F;name_resolver.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 1s disk-cache, darwin-sandbox
+    Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;java&#x2F;helpers.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 1s disk-cache, darwin-sandbox
+    Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;objectivec&#x2F;enum.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 1s disk-cache, darwin-sandbox
+    Compiling absl&#x2F;strings&#x2F;cord.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 1s disk-cache, darwin-sandbox
+    Compiling src&#x2F;google&#x2F;protobuf&#x2F;compiler&#x2F;objectivec&#x2F;names.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 0s disk-cache, darwin-sandbox
+    Compiling absl&#x2F;time&#x2F;internal&#x2F;cctz&#x2F;src&#x2F;time_zone_lookup.cc&lt;span class=&quot;p&quot;&gt;;&lt;&#x2F;span&gt; 0s disk-cache, darwin-sandbox ...
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;I finally had it with Bazel &lt;strong&gt;recompiling protoc&lt;&#x2F;strong&gt; 😤&lt;&#x2F;p&gt;
+
+&lt;p&gt;The working title for this post: &lt;em&gt;Why the #$@! does protoc keep recompiling!&lt;&#x2F;em&gt; 🤬&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are not interested in the story and just want to avoid recompiling &lt;em&gt;protoc&lt;&#x2F;em&gt;, try putting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build --incompatible_strict_action_env&lt;&#x2F;code&gt; in your &lt;em&gt;.bazelrc&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+
+  &lt;p&gt;Checkout Aspect’s &lt;a href=&quot;https:&#x2F;&#x2F;docs.aspect.build&#x2F;guides&#x2F;bazelrc&#x2F;&quot;&gt;bazelrc guide&lt;&#x2F;a&gt; for other good tidbits.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Admittedly, I’ve been using Bazel a while and I wasn’t sure why I kept having to rebuild &lt;em&gt;protoc&lt;&#x2F;em&gt; despite nothing seemingly changing on my system.&lt;&#x2F;p&gt;
+
+&lt;p&gt;Worse, my coworkers who I’ve been working hard to champion Bazel were starting to notice.&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;em&gt;“You explained that Bazel is supposed to be hermetic and have great caching. Why am I recompiling protoc?”&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;This seems to be a bit of an issue within the Bazel community so much so, that one recommended approach is just &lt;em&gt;use precompiled binaries&lt;&#x2F;em&gt; via &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;aspect-build&#x2F;toolchains_protoc&quot;&gt;aspect-build&#x2F;toolchains_protoc&lt;&#x2F;a&gt;. 🤦&lt;&#x2F;p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Aside&lt;&#x2F;em&gt;: Using prebuilt binaries not only hinders my own personal adoption of Bazel on &lt;a href=&quot;https:&#x2F;&#x2F;nixos.org&quot;&gt;NixOS&lt;&#x2F;a&gt; but devalues the value proposition of Bazel itself.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;Turns out there is a long-standing &lt;strong&gt;5 year old&lt;&#x2F;strong&gt; issue &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bazelbuild&#x2F;bazel&#x2F;issues&#x2F;7095&quot;&gt;issues#7095&lt;&#x2F;a&gt; that provided some clues; specifically changing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;&#x2F;code&gt; is busting the action key.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I want to validate this assumption, by following the guide on &lt;a href=&quot;https:&#x2F;&#x2F;bazel.build&#x2F;remote&#x2F;cache-remote&quot;&gt;how to debug remote cache hits&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I ran Bazel twice, once with a different &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;&#x2F;code&gt; and stored the compact execution log.
+I then convert it to textual form and diff them.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# build protoc normally&lt;&#x2F;span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; bazel build @com_google_protobuf&#x2F;&#x2F;:protoc &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+    &lt;span class=&quot;nt&quot;&gt;--execution_log_compact_file&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&#x2F;tmp&#x2F;exec1.log
+
+&lt;span class=&quot;c&quot;&gt;# muck up the PATH&lt;&#x2F;span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;nv&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;&#x2F;span&gt;:&#x2F;bin4&#x2F; bazel build @com_google_protobuf&#x2F;&#x2F;:protoc &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+    &lt;span class=&quot;nt&quot;&gt;--execution_log_compact_file&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&#x2F;tmp&#x2F;exec2.log
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; bazel-bin&#x2F;src&#x2F;tools&#x2F;execlog&#x2F;parser &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--log_path&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&#x2F;tmp&#x2F;exec1.log &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--log_path&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&#x2F;tmp&#x2F;exec2.log &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--output_path&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&#x2F;tmp&#x2F;exec1.log.txt &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &lt;span class=&quot;nt&quot;&gt;--output_path&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&#x2F;tmp&#x2F;exec2.log.txt
+
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;&#x2F;span&gt; diff &#x2F;tmp&#x2F;exec1.log.txt &#x2F;tmp&#x2F;exec2.log.txt | &lt;span class=&quot;nb&quot;&gt;head&lt;&#x2F;span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;&#x2F;span&gt; 30
+&lt;span class=&quot;c&quot;&gt;# omitted for brevity&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Sure enough; there is an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action_env&lt;&#x2F;code&gt; with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;&#x2F;code&gt; variable and it’s different, causing the action digest to change.&lt;&#x2F;p&gt;
+
+&lt;p&gt;But, why! 🤔&lt;&#x2F;p&gt;
+
+&lt;p&gt;Some of the actions used in the C++ toolchain use the shell’s default environment.
+For instance, Bazel doesn’t include a C++ toolchain by default so it has to find a C++ compiler by searching
+on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;&#x2F;code&gt; itself.&lt;&#x2F;p&gt;
+
+&lt;p&gt;We can test this (thanks to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;keith&quot;&gt;keith&lt;&#x2F;a&gt; for this) with a small demo.
+We can see what envs are in actions by default passing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-s&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+    &lt;span class=&quot;nb&quot;&gt;file&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;declare_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;run_shell&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;outputs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;command&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;touch {}&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;DefaultInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;files&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;foo&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Will produce:&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SUBCOMMAND: &lt;span class=&quot;c&quot;&gt;# &#x2F;&#x2F;:bar [action &#x27;Action bar&#x27;, configuration: 815f76489fb61a0245ff1941974c20af0ca4e7f91caa00c80538d4493d650289, execution platform: @@platforms&#x2F;&#x2F;host:host, mnemonic: Action]&lt;&#x2F;span&gt;
+&lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;&#x2F;span&gt; &#x2F;home&#x2F;ubuntu&#x2F;.cache&#x2F;bazel&#x2F;_bazel_ubuntu&#x2F;1275a810ad76d4d1cc60319d4aaf0d39&#x2F;execroot&#x2F;_main &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;&#x2F;span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &lt;span class=&quot;nb&quot;&gt;exec env&lt;&#x2F;span&gt; - &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &#x2F;bin&#x2F;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;&#x2F;span&gt; &lt;span class=&quot;s1&quot;&gt;&#x27;touch bazel-out&#x2F;aarch64-fastbuild&#x2F;bin&#x2F;bar&#x27;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;If we change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run_shell&lt;&#x2F;code&gt; action to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;use_default_shell_env=True&lt;&#x2F;code&gt; we then get.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SUBCOMMAND: &lt;span class=&quot;c&quot;&gt;# &#x2F;&#x2F;:bar [action &#x27;Action bar&#x27;, configuration: 815f76489fb61a0245ff1941974c20af0ca4e7f91caa00c80538d4493d650289, execution platform: @@platforms&#x2F;&#x2F;host:host, mnemonic: Action]&lt;&#x2F;span&gt;
+&lt;span class=&quot;o&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;&#x2F;span&gt; &#x2F;home&#x2F;ubuntu&#x2F;.cache&#x2F;bazel&#x2F;_bazel_ubuntu&#x2F;1275a810ad76d4d1cc60319d4aaf0d39&#x2F;execroot&#x2F;_main &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;&#x2F;span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &lt;span class=&quot;nb&quot;&gt;exec env&lt;&#x2F;span&gt; - &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+    &lt;span class=&quot;nv&quot;&gt;PATH&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&amp;lt;OMITTED FOR BREVITY&amp;gt; &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+  &#x2F;bin&#x2F;bash &lt;span class=&quot;nt&quot;&gt;-c&lt;&#x2F;span&gt; &lt;span class=&quot;s1&quot;&gt;&#x27;touch bazel-out&#x2F;aarch64-fastbuild&#x2F;bin&#x2F;bar&#x27;&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;Okay, so how do we solve this?&lt;&#x2F;p&gt;
+
+&lt;p&gt;There are two ways to solve this.&lt;&#x2F;p&gt;
+
+&lt;p&gt;First, you can try &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--incompatible_strict_action_env&lt;&#x2F;code&gt; in your &lt;em&gt;.bazerc&lt;&#x2F;em&gt; file.
+If this flag is set, Bazel will force set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;&#x2F;code&gt; to be a static value. If your C++ compiler is either a hermetic toolchain or found in the default lists set; you are good to go!&lt;&#x2F;p&gt;
+
+&lt;p&gt;If you tried the first option but your build is failing, you’ll have to manually force set the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;&#x2F;code&gt; via the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action_env&lt;&#x2F;code&gt; flag such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--action_env=PATH=&#x2F;usr&#x2F;bin:&#x2F;something&#x2F;custom&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+
+&lt;p&gt;Hopefully these settings get you from recompiling &lt;em&gt;protoc&lt;&#x2F;em&gt; and reach Bazel nirvana.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I highly recommend &lt;a href=&quot;https:&#x2F;&#x2F;docs.aspect.build&#x2F;guides&#x2F;bazelrc&#x2F;&quot;&gt;Aspect’s bazelrc guide&lt;&#x2F;a&gt; for other no-nonsense settings that should likely just be the default 🙄&lt;&#x2F;p&gt;
+        </content>
+      </entry>
+  
+    <entry>
+      <id>https://fzakaria.com/2024/10/13/bazel-knowledge-aspects-to-generate-java-classpath/planet.tvl.fyi</id>
+      <title>Bazel Knowledge: Aspects to generate Java CLASSPATH</title>
+      
+        <link href="https://fzakaria.com/2024/10/13/bazel-knowledge-aspects-to-generate-java-classpath.html" rel="alternate"/>
+      
+      
+        <updated>2024-10-13T18:10:00Z</updated>
+      
+      
+        <published>2024-10-13T18:10:00Z</published>
+      
+      <summary>
+          One of the more advanced features of Bazel is the concept of aspect. For a very brief primer on why you may want an aspect is that Bazel let’s you audit and analyze the BUILD graph without performing any actual builds. It does this by constructing a “shadow graph” that your aspect can perform analysis on. This can be useful for a variety things such as IDE integration. I wanted to ask a very simple question to make integration with Visual Studio Code straightforward: “What’s the CLASSPATH I need for a particular target so that I don’t get red squigglies?”
+        </summary>
+      
+        <author>
+          <name>unknown</name>
+          </author>
+        
+      <content  >
+          &lt;p&gt;One of the more advanced features of &lt;a href=&quot;https:&#x2F;&#x2F;bazel.build&quot;&gt;Bazel&lt;&#x2F;a&gt; is the concept of &lt;a href=&quot;https:&#x2F;&#x2F;bazel.build&#x2F;extending&#x2F;aspects&quot;&gt;aspect&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+
+&lt;p&gt;For a very brief primer on why you may want an aspect is that Bazel let’s you audit and analyze the BUILD graph without performing any actual builds. It does this by constructing a “shadow graph” that your aspect can perform analysis on. This can be useful for a variety things such as IDE integration.&lt;&#x2F;p&gt;
+
+&lt;p&gt;I wanted to ask a very simple question to make integration with Visual Studio Code straightforward:&lt;&#x2F;p&gt;
+
+&lt;p&gt;&lt;em&gt;“What’s the CLASSPATH I need for a particular target so that I don’t get red squigglies?”&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Sometimes simple questions involve some of the more advanced features of Bazel.
+I wanted to generate a file that I can feed into any IDE, such as Visual Studio Code, and get semi-decent language integration.&lt;&#x2F;p&gt;
+
+&lt;p&gt;My end goal:&lt;&#x2F;p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;bazel build &#x2F;&#x2F;:generate_classpath
+&lt;span class=&quot;go&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;&#x2F;span&gt;bazel-bin&#x2F;classpath.txt
+&lt;span class=&quot;go&quot;&gt;bazel-out&#x2F;k8-fastbuild&#x2F;bin&#x2F;java&#x2F;lib&#x2F;liblib.jar
+bazel-out&#x2F;k8-fastbuild&#x2F;bin&#x2F;java&#x2F;lib2&#x2F;liblib2.jar
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;First thing we want to do is generate an aspect that will collect recursively all the compile time Jars.&lt;&#x2F;p&gt;
+
+&lt;p&gt;We define our aspect which requires the sole &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deps&lt;&#x2F;code&gt; attribute to be propagated.
+We then make sure we recursively merge all the results of the prior aspect invocations into the final
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ClassPathInfo&lt;&#x2F;code&gt; provider object.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ClassPathInfo&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;provider&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;Provider for classpath information&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;fields&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&#x27;compile_jars&#x27;&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&#x27;depset of compile jars&#x27;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;_classpath_aspect_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Make sure the rule has a deps attribute.
+&lt;&#x2F;span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;&#x2F;span&gt; &lt;span class=&quot;nb&quot;&gt;hasattr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&#x27;deps&#x27;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;target_compile_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;JavaInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;full_compile_jars&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;dep_compile_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;dep&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ClassPathInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;compile_jars&lt;&#x2F;span&gt;
+            &lt;span class=&quot;k&quot;&gt;for&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;dep&lt;&#x2F;span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;deps&lt;&#x2F;span&gt;
+        &lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;all_compile_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;target_compile_jars&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;dep_compile_jars&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;merged_depset&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;transitive&lt;&#x2F;span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;all_compile_jars&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;classpath_strings&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;&#x2F;span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;jar&lt;&#x2F;span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;merged_depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;to_list&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;classpath_strings&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;output_file&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;declare_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;classpath.txt&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;output&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;output_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;content&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;classpath_strings&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;is_executable&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;&#x2F;span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ClassPathInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;compile_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;merged_depset&lt;&#x2F;span&gt;
+            &lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;OutputGroupInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+                &lt;span class=&quot;n&quot;&gt;compile_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;output_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;&#x2F;span&gt;
+            &lt;span class=&quot;p&quot;&gt;)]&lt;&#x2F;span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ClassPathInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;compile_jars&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;())]&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;classpath_aspect&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;aspect&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;_classpath_aspect_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# attr_aspects is a list of rule attributes along
+&lt;&#x2F;span&gt;    &lt;span class=&quot;c1&quot;&gt;# which the aspect propagates.
+&lt;&#x2F;span&gt;    &lt;span class=&quot;n&quot;&gt;attr_aspects&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&#x27;deps&#x27;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;A &lt;em&gt;less documented&lt;&#x2F;em&gt; feature of Bazel is the “output groups” which you can see here we are
+by specifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OuputGroupInfo&lt;&#x2F;code&gt;. The idea here is that we can now specify our apect for any
+label by using this command line invocation:&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt; &lt;&#x2F;span&gt;bazel build &#x2F;&#x2F;java&#x2F;app &lt;span class=&quot;nt&quot;&gt;--aspects&lt;&#x2F;span&gt; defs.bzl%classpath_aspect &lt;span class=&quot;se&quot;&gt;\&lt;&#x2F;span&gt;
+&lt;span class=&quot;go&quot;&gt;        --output_groups=compile_jars
+
+INFO: Analyzed target &#x2F;&#x2F;java&#x2F;app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Aspect &#x2F;&#x2F;:defs.bzl%classpath_aspect of &#x2F;&#x2F;java&#x2F;app:app up-to-date:
+  bazel-bin&#x2F;java&#x2F;app&#x2F;classpath.txt
+
+&lt;&#x2F;span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;&#x2F;span&gt;bazel-bin&#x2F;java&#x2F;app&#x2F;classpath.txt
+&lt;span class=&quot;go&quot;&gt;bazel-out&#x2F;k8-fastbuild&#x2F;bin&#x2F;java&#x2F;lib&#x2F;liblib.jar
+bazel-out&#x2F;k8-fastbuild&#x2F;bin&#x2F;java&#x2F;lib2&#x2F;liblib2.jar⏎
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;That’s not all though! We can also create a rule that defines the labels provided must be of the type aspect.
+This let’s us encode the build targets in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BUILD&lt;&#x2F;code&gt; files themselves.&lt;&#x2F;p&gt;
+
+&lt;p&gt;The rule itself is straightforward. For each label provided, it goes through the
+items in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile_jars&lt;&#x2F;code&gt; depset and creates an output file which is the
+concatenated new-line delimited list.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;&#x2F;span&gt; &lt;span class=&quot;nf&quot;&gt;_generate_classpath_rule_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;&#x2F;span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;dep&lt;&#x2F;span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;deps&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;classpath_strings&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;&#x2F;span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;jar&lt;&#x2F;span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;dep&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;ClassPathInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;compile_jars&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;to_list&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;classpath_strings&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;jar&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;output_file&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;declare_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;classpath.txt&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+        &lt;span class=&quot;n&quot;&gt;ctx&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;actions&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;output&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;output_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+            &lt;span class=&quot;n&quot;&gt;content&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;classpath_strings&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;&#x2F;span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;DefaultInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;files&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;depset&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;output_file&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]))]&lt;&#x2F;span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;DefaultInfo&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;files&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;&#x2F;span&gt;
+
+&lt;span class=&quot;n&quot;&gt;generate_classpath_rule&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;implementation&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;_generate_classpath_rule_impl&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;attrs&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&#x27;deps&#x27;&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;n&quot;&gt;attr&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;label_list&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;aspects&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;n&quot;&gt;classpath_aspect&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;❗ There is a bit of duplication in the rule for generating the output file. We could have also
+used the OutputGroupInfo and merged all the files together.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+
+&lt;p&gt;In order to invoke this rule you define it in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BUILD&lt;&#x2F;code&gt; file and give it the top-level
+applications that you are working on.&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;generate_classpath_rule&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;s&quot;&gt;&quot;generate_classpath&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;n&quot;&gt;deps&lt;&#x2F;span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;&#x2F;span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&#x2F;&#x2F;java&#x2F;app:app&quot;&lt;&#x2F;span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;&#x2F;span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;&#x2F;span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;&#x2F;span&gt;
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;
+
+&lt;p&gt;🎉 We now have &lt;strong&gt;two&lt;&#x2F;strong&gt; pretty simple ways to generate the compile-time CLASSPATH for a label.
+This can make integrations with IDEs a bit more straightforward if they don’t have a working Bazel plugin.&lt;&#x2F;p&gt;
         </content>
       </entry>
   

@@ -8,6 +8,7 @@
     <link rel="alternate" type="application/xml+atom" title="Planet Haskell Atom Feed" href="atom.xml">
   </head>
   <body>
+    <div id="bodydiv">
     <header>
       <h1>Planet TVL</h1>
     </header>
@@ -40,7 +41,6 @@
               <date>
                 <span>07.01.2025 12:24</span>
                 </date>
-              &mdash; <span class="entry_author">author</span>
               </div>
 
             <div class="entry_summary">
@@ -49,6 +49,60 @@
 <p><img src="https://blog.benjojo.co.uk/asset/FFyEvN2TXy" alt="" /></p>
 
 <p>This post is a textual version of a talk I gave at <a href="https://events.ccc.de/congress/2024/infos/startpage.html">The 38th Chaos Computer Congress</a> at the end of 2018</p>
+              </div>
+            </article>
+        <hr class="entry_sep">
+          <article>
+            <h2 class="entry_header">
+              <a href="https://blog.koch.ro/posts/2025-01-05-epiphany-38c3-sixos-talk.html">
+                Epiphany from 38c3 sixos talk
+                </a>
+            </h2>
+            <div class="entry_meta">
+              <date>
+                <span>05.01.2025 00:00</span>
+                </date>
+              &mdash; <span class="entry_author">Thomas Koch</span>
+              </div>
+
+            <div class="entry_summary">
+                <div class="info">
+    Posted on January  5, 2025
+    
+</div>
+<div class="info">
+    
+    Tags: <a title="All pages tagged &#39;debian&#39;." href="/tags/debian.html">debian</a>, <a title="All pages tagged &#39;nix&#39;." href="/tags/nix.html">nix</a>
+    
+</div>
+
+<p>There are so many new insights from this talk, that I need to pin them down.</p>
+<p><a href="https://media.ccc.de/v/38c3-sixos-a-nix-os-without-systemd">sixos: a nix os without systemd</a> by Adam Joseph (<a href="https://events.ccc.de/congress/2024/hub/de/event/sixos-a-nix-os-without-systemd/">Fahrplan</a>)</p>
+<p><a href="https://codeberg.org/amjoseph/sixos">sixos</a> is much like <a href="https://nixos.org">NixOS</a> but uses <a href="https://www.skarnet.org/software/s6/overview.html">s6</a> instead of systemd and an alternative configuration mechanism for services called “<a href="https://codeberg.org/amjoseph/infuse.nix">infusion</a>” instead of nixos’ modules. s6 is a set of small tools that together provide the functionality of process supervision, service dependency mangagement and more.</p>
+<p>The s6 site provides A LOT of insight about how to do all of this conforming to the UNIX philosophy. Especially new and interesting to me were the bits about “chain loading” and this <a href="https://skarnet.org/lists/supervision/0422.html">rant about systemd</a>. The latter finally convinced me, that systemd is a bad thing and that I should try to get rid of it. - Sorry for being a bit late to the party.</p>
+<p>I’ve a dream of creating a replacement for kubernetes. I don’t need such a thing right now, but it would heal some post-traumatic syndroms after two years of kubernetes support. The small and simple tools from s6 together with nix would already cover a lot of ground.</p>
+<p>More interesting bits discoverd:</p>
+<ul>
+<li>“chain loading” aka “<a href="http://www.catb.org/~esr/writings/taoup/html/ch06s06.html">Bernstein chaining</a>” are terms to describe a chain of processes exec’ing into each other. I didn’t know there are names for this. It’s actually so powerful that one can build a programming language on top of it: <a href="https://skarnet.org/software/execline/grammar.html">execline</a>.</li>
+<li><a href="https://github.com/illiliti/libudev-zero">libudev-zero</a> - daemonless replacement for libudev
+<ul>
+<li><a href="https://github.com/illiliti/respectful-software">respectful-software</a> - alternatives to CoCs and CLAs and more good advice</li>
+<li><a href="https://kisscommunity.bvnf.space/">KISS Linux Community</a> - I love KISS</li>
+</ul></li>
+<li><a href="https://www.brain-dump.org/projects/abduco/">abduco</a> - lighter alternative to SCREEN and TMUX</li>
+</ul>
+<p>This find quote I want to learn by heart:</p>
+<blockquote>
+<p>“If the users don’t control the program, the program controls the users. With proprietary software, there is always some entity, the “owner” of the program, that controls the program and through it, exercises power over its users. A nonfree program is a yoke, an instrument of unjust power.” — Richard Stallman<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>There is no hint to any communication channel for discussions about sixos. But Adam pointed to the <a href="https://tvl.fyi">tvl</a> channel on <a href="https://hackint.org">hackint</a> during his talk for people interested in improving Nix and he is actually operator of a channel #six on hackint. He is amjoseph on IRC.</p>
+<p>Now I’m just curious whether there is a story behind the slogan “ca-bundle.crt is malware” that Adam had on his shirt during the talk.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="https://archive.org/details/stallman-programs-controlling-users">https://archive.org/details/stallman-programs-controlling-users</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
               </div>
             </article>
         <hr class="entry_sep">
@@ -219,12 +273,8 @@ preventing a clean shutdown.</p>
               <date>
                 <span>18.12.2024 20:21</span>
                 </date>
-              &mdash; <span class="entry_author">unknown</span>
               </div>
 
-            <div class="entry_summary">
-                While testcontainers have made it simple to run containers for unit &amp; system tests, they are not well suited for Bazel as they rely on docker pull to hydrate the Docker daemon. The pulls rely on tags which may be rewritten and require input from data (i.e, the images themselves) unknown to Bazel, as well as network access.
-              </div>
             <div class="entry_content">
                 <p>While <a href="https://testcontainers.com/">testcontainers</a> have made it simple to run containers for unit &amp; system tests, they are not well suited for <a href="https://bazel.build/">Bazel</a> as they rely on <code class="language-plaintext highlighter-rouge">docker pull</code> to hydrate the Docker daemon. The pulls rely on tags which may be rewritten and require input from data (i.e, the images themselves) unknown to Bazel, as well as network access.</p>
 
@@ -475,7 +525,6 @@ docker load &lt; test.tar.gz  0.38s user 1.62s system 13% cpu 14.565 total
               <date>
                 <span>05.12.2024 10:43</span>
                 </date>
-              &mdash; <span class="entry_author">author</span>
               </div>
 
             <div class="entry_summary">
@@ -679,12 +728,8 @@ the scrape targets without having to touch the metrics server itself.</p>
               <date>
                 <span>28.11.2024 22:07</span>
                 </date>
-              &mdash; <span class="entry_author">unknown</span>
               </div>
 
-            <div class="entry_summary">
-                Bazel has always had support for protocol buffers (protobuf) since the beginning. Both being a Google product, one would think that their integration would be seamless and the best experience. Unfortunately, it’s some of the worst part of the user experience with Bazel I’ve found. 😔
-              </div>
             <div class="entry_content">
                 <p>Bazel has always had support for <a href="https://protobuf.dev/">protocol buffers (protobuf)</a> since the beginning.
 Both being a Google product, one would think that their integration would be seamless and the best experience.
@@ -872,12 +917,8 @@ and served as a great resource for my previous post on <a href="/2024/10/23/baze
               <date>
                 <span>08.11.2024 22:01</span>
                 </date>
-              &mdash; <span class="entry_author">unknown</span>
               </div>
 
-            <div class="entry_summary">
-                Ever heard of a JarIndex? I had been doing JVM development for 10+ years and I hadn’t. Read on to discover what it is and how it can speedup your compilation and boot time. 🤓 After having worked on Shrinkwrap and publishing our results in Mapping Out the HPC Dependency Chaos, you start to see the Linux environment as a bit of an oddball. Everything in Linux is structured around O(n) or O(n^2) search and lookup. This feels now unsurprising given that everything in Linux searches across colon separate lists (i.e. LD_LIBRARY_PATH, RUN_PATH). This idiom however is even more pervasive and has bled into all of our language. The JVM for instance, must search for classes amongst a set of directories, files or JARs set on the CLASS_PATH.
-              </div>
             <div class="entry_content">
                 <p><em>Ever heard of a JarIndex? I had been doing JVM development for 10+ years and I hadn’t. Read on to discover what it is and how it can speedup your compilation and boot time.</em> 🤓</p>
 
@@ -981,93 +1022,814 @@ B.class
 this stability and regressing to the default search often found in our tooling is leaving easy performance improvements on the floor.</p>
               </div>
             </article>
+        <hr class="entry_sep">
+          <article>
+            <h2 class="entry_header">
+              <a href="https://leahneukirchen.org/blog/archive/2024/11/problem-solving-with-answer-set-programming.html">
+                Problem Solving with Answer Set Programming
+                </a>
+            </h2>
+            <div class="entry_meta">
+              <date>
+                <span>06.11.2024 21:47</span>
+                </date>
+              &mdash; <span class="entry_author">Leah Neukirchen</span>
+              </div>
+
+            <div class="entry_content">
+                <p>A few months ago I found an article on how to
+<a href="https://alt-romes.github.io/posts/2024-08-14-planning-a-workout-week-with-100-lines-of-haskell.html">organize your training plan using logic programming</a>,
+which used Haskell to implement a logic language.</p>
+<p>At first, I thought this is a good problem to solve in Prolog, but
+there’s a difficulty: Prolog makes it quite hard to specify models
+that have multiple possible outcomes (yes, you can work with backtracking, but
+it gets tricky when you start to combine multiple predicates or fiddle
+around with <code>bagof</code>).</p>
+<p>An alternative to classic Prolog is the concept of Answer Set
+Programming, based on the <a href="https://www.cs.utexas.edu/~ai-lab/?gel88=">Stable Model Semantics by Gelfond and
+Lifschitz</a> (1988).  Here,
+the idea is that the logical formulas specify models, and the goal of
+Answer Set Programming is to compute the Answer Sets, i.e. a set of
+models fulfilling the formulas.</p>
+<p>I can’t do a full introduction to Answer Set Programming here,
+but I can recommend the overview article <a href="https://dl.acm.org/doi/10.1145/2043174.2043195">Answer set programming at a glance</a> by Brewka et. al.,
+as well as
+the short article <a href="https://www.cs.utexas.edu/~vl/papers/wiasp.pdf">What Is Answer Set Programming?</a>
+and the book <a href="https://link.springer.com/book/10.1007/978-3-030-24658-7">Answer Set Programming</a> by Lifschitz.</p>
+<h4>So what is a stable model?</h4>
+<p>Essentially, we can think of a stable model as a maximal set of atoms
+that are true (derivable from the rules) without being in conflict to
+other propositions.  If we don’t use negation, that pretty boring</p>
+<p>However, consider this logic program:</p>
+<pre><code>q :- not p.
+p :- not q.
+</code></pre>
+<p>Contrary to what you may expect, it has two models: {p} and {q}.
+This is because ASP uses default negation, which means “not A” is
+assumed to hold unless A is derived.
+Both cannot be true at the same time, but likewise the empty set
+is not a model because it can be extended to {p} or {q}.</p>
+<p>The program <code>p :- not not p.</code> has two models, {} and {p}.</p>
+<p>Let’s do a small problem first so we get a feel for the tooling.  I
+chose to use <a href="https://potassco.org/clingo/">clingo</a>, which is the most
+advanced open source implementation of Answer Set Programming.</p>
+<p>If your distribution doesn’t include it, you can run it from Nix:</p>
+<pre><code>nix shell nixpkgs#clingo
+</code></pre>
+<p>Let’s model a directed graph with four nodes:</p>
+<pre><code>edge(a,b).
+edge(a,c).
+edge(b,d).
+edge(c,d).
+</code></pre>
+<p>Our problem is to find paths from <code>a</code> to <code>d</code>.  We can define a
+relation <code>step</code>, which either means “we can step from X to <code>d</code>”
+or “we can step from X to Y when there’s an edge from X to Y and
+another step from Y”:</p>
+<pre><code>0 { step(X,E) } 1 :- edge(X,E), E = d.
+0 { step(X,Y) } 1 :- edge(X,Y), step(Y,_).
+</code></pre>
+<p>The <code>0 { ... } 1</code> decoration means that each step can be taken at most once.</p>
+<p>Finally, we need to specify our goal, which in tradition of logic
+programming, is written as a negation:</p>
+<pre><code>:- not step(a,_).
+#show step/2.
+</code></pre>
+<p>This means “it is not the case that there’s no step starting from <code>a</code>”.</p>
+<p>The <code>#show</code> instructions limits clingo to only output the binary
+<code>step</code> relation.  Let’s run it:</p>
+<pre><code>% gringo graph.pl | clasp    
+clasp version 3.3.10
+Reading from stdin
+Solving...
+Answer: 1
+step(b,d) step(a,b)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
+</code></pre>
+<p>Clingo has found a solution.  We can go from <code>a</code> to <code>b</code> and from <code>b</code> to <code>d</code>.</p>
+<p>We can also ask for all solutions, by passing <code>-n0</code>:</p>
+<pre><code>% gringo graph.pl | clasp -n0
+clasp version 3.3.10
+Reading from stdin
+Solving...
+Answer: 1
+step(b,d) step(a,b)
+Answer: 2
+step(c,d) step(b,d) step(a,b)
+Answer: 3
+step(c,d) step(a,c)
+Answer: 4
+step(c,d) step(b,d) step(a,c)
+Answer: 5
+step(c,d) step(b,d) step(a,b) step(a,c)
+SATISFIABLE
+
+Models       : 5
+Calls        : 1
+Time         : 0.000s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s
+</code></pre>
+<p>Here we see there are five possible models of this system (but every
+model except the first and the third has superflous steps).</p>
+<p>To see why the <code>0 { ... } 1</code> matters, here’s what happens without it:</p>
+<pre><code>Answer: 1
+step(b,d) step(c,d) step(a,b) step(a,c)
+SATISFIABLE
+</code></pre>
+<p>Now there is only one model, but it contains all paths.
+Cardinality bounds are implemented using negation internally.</p>
+<h4>Planning Weekly Workouts in 30 lines of ASP</h4>
+<p>Back to the original task:
+<a href="https://alt-romes.github.io/posts/2024-08-14-planning-a-workout-week-with-100-lines-of-haskell.html">Planning Weekly Workouts in 100 lines of Haskell</a>.</p>
+<p>The goal is to create a weekly plan of training exercises according to
+some specific rules.</p>
+<p>First, we need some definitions related to weekdays:</p>
+<pre><code>weekday(1..7).
+
+n_weekday(D, DD)  :- weekday(D), weekday(DD), (D+1) \ 7 == DD \ 7.
+nn_weekday(D, DD) :- weekday(D), weekday(DD), (D+2) \ 7 == DD \ 7.
+
+two_weekday(D, DD) :- n_weekday(D, DD).
+two_weekday(D, DD) :- nn_weekday(D, DD).
+two_weekday(D, DD) :- two_weekday(DD, D).
+</code></pre>
+<p>This is a bit more complicated because we later need “day after”
+and “within two days”.  (<code>\</code> means modulo.)</p>
+<p>Now, let’s define workout and running exercises:</p>
+<pre><code>workout(push; pull; leg; none).
+running(long; short; none).
+</code></pre>
+<p>To the plan: each weekday has one workout and one running exercise:</p>
+<pre><code>{ plan(D,W,R) : workout(W), running(R) } = 1 :- weekday(D).
+</code></pre>
+<p>We then add the constraints:</p>
+<pre><code>% No running on leg day
+plan(D, leg, none) :- plan(D, leg, _).
+
+% Short intervals run is after an outdoor pull/push workout
+:- plan(_, none, short).
+
+% Workout on Monday outdoors always, not legs
+:- plan(1, none, _).
+:- plan(1, leg, _).
+
+% Pull day during the week?
+:- plan(6..7, pull, _).
+
+% One long run, one short run
+{ plan(D,W,long) : weekday(D), workout(W) } = 1.
+{ plan(D,W,short) : weekday(D), workout(W) } = 1.
+
+% Two push, two pull, two leg
+:- not { plan(D,push,R) } = 2.
+:- not { plan(D,pull,R) } = 2.
+:- not { plan(D,leg,R) } = 2.
+
+% Long run on weekend
+{ plan(6..7,W,long) : workout(W) } = 1.
+
+% Run spaced out at least 2 days
+:- plan(D,_,short), plan(DD,_,long), two_weekday(D, DD).
+
+% Space out workouts at least 2 days
+:- plan(D,W,_), plan(DD,W,_), W != none, two_weekday(D, DD).
+
+% No leg day before short run
+% No leg day before a long run
+{ plan(D,W,R) : running(R), R != none, workout(W), plan(DD,leg,_), n_weekday(D, DD) } = 1.
+
+#show plan/3.
+</code></pre>
+<p>clingo generates the same three plans as the Haskell program:</p>
+<pre><code>Solving...
+Answer: 1
+plan(5,leg,none) plan(2,leg,none) plan(1,pull,none) plan(3,push,none) plan(4,pull,short) plan(6,push,none) plan(7,none,long)
+Answer: 2
+plan(5,leg,none) plan(2,leg,none) plan(1,pull,none) plan(3,push,none) plan(4,pull,short) plan(6,none,none) plan(7,push,long)
+Answer: 3
+plan(7,leg,none) plan(4,leg,none) plan(1,pull,none) plan(2,push,short) plan(3,none,none) plan(5,pull,none) plan(6,push,long)
+SATISFIABLE
+</code></pre>
+<h4>Answer Set Programming against heteronormativity</h4>
+<p>The next problem I solved using ASP was a silly exercise from
+a statistics book
+(Lehn, Wegmann, Rettig: Aufgabensammlung zur Einführung in die Statistik),
+translation mine:</p>
+<blockquote>
+<p>Exercise 11c) Ten French married couples bid goodbye to each other:
+the men with the men by shaking hands, the women with the women by
+kisses on both cheeks, and women with the men likewise by kisses on
+both cheeks.  How many kisses and how many handshakes take place?</p>
+</blockquote>
+<p>The implicit assumption of the exercise is that all married couples
+consist of a man and a woman, but it’s more fun to solve it in a
+generic way.  So let’s do that using ASP.</p>
+<p>First, we model the people and their fixed binary gender (more assumptions,
+but else the exercise is truly underspecified):</p>
+<pre><code>person(0..19).
+gender(man; woman).
+{ gender(P, G) : gender(G) } = 1 :- person(P).
+</code></pre>
+<p>I decided to model a couple using an even and odd numbered person:</p>
+<pre><code>couple(A, B) :- person(A), person(B), A != B, A/2 == B/2.
+</code></pre>
+<p>Next, we model the handshakes.  Two people shake hands if they are not
+part of the same couple, and both are men:</p>
+<pre><code>handshake(A, B) :- person(A), person(B), A &lt; B, not couple(A, B), gender(A, man), gender(B, man).
+</code></pre>
+<p>The <code>A &lt; B</code> ensures we only count one handshake between two men,
+as handshaking is a symmetric act.</p>
+<p>We also count the handshakes:</p>
+<pre><code>handshakes(N) :- N = #count { handshakes(A, B) : handshake(A, B) }.
+</code></pre>
+<p>Likewise, two kisses happen between two persons not in the same couple
+where one is a woman.  Note that kisses are asymmetric since they go
+from mouth to cheek (this cost me an hour of debugging…):</p>
+<pre><code>kiss(A, B) :- person(A), person(B), not A == B, not couple(A, B), gender(A, woman).
+kiss(A, B) :- person(A), person(B), not A == B, not couple(A, B), gender(B, woman).
+kisses(N) :- H = #count { kisses(A, B) : kiss(A, B) }, N = H * 2.
+</code></pre>
+<p>Finally, we also count men and women for reporting purposes:</p>
+<pre><code>men(N) :- N = #count { g(P) : gender(P, man) }.
+women(N) :- N = #count { g(P) : gender(P, woman) }.
+
+#show handshakes/1.
+#show kisses/1.
+#show men/1.
+#show women/1.
+</code></pre>
+<p>Thanks to clingo’s parallelization support, we can compute all
+possible 2<sup>20</sup> solutions very quickly:</p>
+<pre><code>Solving...
+Answer: 1
+women(0) men(20) kisses(0) handshakes(180)
+Answer: 2
+women(1) men(19) kisses(72) handshakes(162)
+Answer: 3
+women(1) men(19) kisses(72) handshakes(162)
+...
+Answer: 1048576
+women(12) men(8) kisses(616) handshakes(26)
+SATISFIABLE
+
+Models       : 1048576
+Calls        : 1
+Time         : 51.163s (Solving: 51.00s 1st Model: 0.10s Unsat: 0.01s)
+CPU Time     : 463.811s
+Threads      : 16       (Winner: 0)
+</code></pre>
+<p>We can also specialize the model to have only hetero couples:</p>
+<pre><code>:- Z = 0..9, not gender(2*Z, man).
+:- Z = 0..9, not gender(2*Z+1, woman).
+</code></pre>
+<p>Then we get the unique solution:</p>
+<pre><code>Solving...
+Answer: 1
+women(10) men(10) kisses(540) handshakes(45)
+SATISFIABLE
+</code></pre>
+<p>I hope this post could interest you in how Answer Set Programming can be used.
+Some more interesting programs can be found on
+<a href="http://www.hakank.org/constraint_programming_blog/answer_set_programming/">Hakan Kjellerstrand’s blog</a>.</p>
+              </div>
+            </article>
+        <hr class="entry_sep">
+          <article>
+            <h2 class="entry_header">
+              <a href="https://fzakaria.com/2024/10/29/bazel-knowledge-what-s-an-interface-jar.html">
+                Bazel Knowledge: What’s an Interface JAR?
+                </a>
+            </h2>
+            <div class="entry_meta">
+              <date>
+                <span>30.10.2024 02:34</span>
+                </date>
+              </div>
+
+            <div class="entry_content">
+                <p>I spent the day working through an upgrade of our codebase at <em>$DAYJOB$</em> to Java21 and hit Bazel <a href="https://github.com/bazelbuild/bazel/issues/24138">issue#24138</a> as a result of an incorrectly produced <code class="language-plaintext highlighter-rouge">hjar</code>.</p>
+
+<p>🤨
+<em>WTF is an <code class="language-plaintext highlighter-rouge">hjar</code> ?</em></p>
+
+<p>☝️ <em>It is the newer version of <code class="language-plaintext highlighter-rouge">ijar</code> !</em></p>
+
+<p>😠
+<em>WTF is an <code class="language-plaintext highlighter-rouge">ijar</code> ?</em></p>
+
+<p>Let’s discover what an <code class="language-plaintext highlighter-rouge">ijar</code> (Interface JAR) is and how it’s the <em>magic sauce</em> that makes Bazel so fast for Java.</p>
+
+<!--more-->
+
+<p>Let’s consider a simple Makefile</p>
+
+<div class="language-make highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">program</span><span class="o">:</span> <span class="nf">main.o utils.o</span>
+	<span class="nv">$(CC)</span> <span class="nt">-o</span> program main.o utils.o
+
+<span class="nl">main.o</span><span class="o">:</span> <span class="nf">main.c utils.h</span>
+	<span class="nv">$(CC)</span> <span class="nt">-c</span> main.c
+
+<span class="nl">utils.o</span><span class="o">:</span> <span class="nf">utils.c utils.h</span>
+	<span class="nv">$(CC)</span> <span class="nt">-c</span> utils.c
+</code></pre></div></div>
+
+<p>We’ve been taught to make use of <em>header files</em>, especially in C/C++ so that we can avoid recompilation as a form of <em>early cutoff optimization</em>.</p>
+
+<p>☝️ If we change <code class="language-plaintext highlighter-rouge">utils.c</code> solely, we do not have to recompile <code class="language-plaintext highlighter-rouge">main.o</code>.</p>
+
+<p>We can visualize this Makefile in the following graph.</p>
+
+<p><img src="/assets/images/makefile_as_graph.svg" alt="Makefile as a graph" /></p>
+
+<p>Ok, great! What does this have to do with Java &amp; Bazel ?</p>
+
+<p>Well, let’s remember back to my previous post on <a href="/2024/09/26/bazel-knowledge-reproducible-outputs.html">reproducible outputs</a>.</p>
+
+<p>Bazel constructs a similar graph to determine when to do <em>early cutoff optimization</em> through the “Action Key”. Bazel computes a hash for each action, that takes dependencies for instance, and if the hash hasn’t changed it can memoize the work.</p>
+
+<p><img src="/assets/images/action_graph_bazel.png" alt="Bazel Action Graph" /></p>
+
+<p>In Java-world, dependencies are expressed as JARs.</p>
+
+<p>Wouldn’t private-only changes to a dependency (i.e. renaming a private variable) cause the Action Key HASH to change (since it produced a different JAR) ?</p>
+
+<p>🤓 YES! That is why we need an <code class="language-plaintext highlighter-rouge">ijar</code> !</p>
+
+<p><code class="language-plaintext highlighter-rouge">ijar</code> is a tool found within the Bazel repository <a href="https://github.com/bazelbuild/bazel/blob/master/third_party/ijar/README.txt">bazel/third_party/ijar</a>.</p>
+
+<p>You can build and run it fairly simple with Bazel</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bazel run //third_party/ijar
+Usage: ijar <span class="o">[</span><span class="nt">-v</span><span class="o">]</span> <span class="o">[</span><span class="nt">--</span><span class="o">[</span>no]strip_jar] <span class="o">[</span><span class="nt">--target</span> label label] <span class="o">[</span><span class="nt">--injecting_rule_kind</span> kind] x.jar <span class="o">[</span>x_interface.j
+ar&gt;]
+Creates an interface jar from the specified jar file.
+</code></pre></div></div>
+
+<p>It’s purpose is straightforward. The tool strips all non-public information from the JAR. For example, it throws away:</p>
+<ul>
+  <li>Files whose name does not end in “.class”.</li>
+  <li>All executable method code.</li>
+  <li>All private methods and fields.</li>
+  <li>All constants and attributes except the minimal set necessary to describe the class interface.</li>
+  <li>All debugging information
+(LineNumberTable, SourceFile, LocalVariableTables attributes).</li>
+</ul>
+
+<p>The end result is something in spirit to a C/C++ header file.</p>
+
+<p>Let’s see it in practice. 🕵️</p>
+
+<p>Let’s now create an incredibly simple JAR. It will have a single class file within it.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Banana</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">peel</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Peeling the banana..."</span><span class="o">);</span>
+        <span class="n">squish</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">squish</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Squish! The banana got squashed."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>We compile it like usual.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>javac Banana.java
+<span class="nv">$ </span>jar cf banana.jar Banana.class
+</code></pre></div></div>
+
+<p>When we run <code class="language-plaintext highlighter-rouge">ijar</code> on it we get the hash <em>e18e0ae82bdc4deb04f04aa</em></p>
+
+<p>⚠️ I shortened the hashes to make them more legible.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bazel-bin/third_party/ijar/ijar banana.jar
+
+<span class="nv">$ </span><span class="nb">sha256sum </span>banana.jar
+f813749013ea6aba2e00876  banana.jar
+
+<span class="nv">$ </span><span class="nb">sha256sum </span>banana-interface.jar
+e18e0ae82bdc4deb04f04aa  banana-interface.jar
+</code></pre></div></div>
+
+<p>Let’s now change the internals of the <em>Banana</em> class; let’s rename the method <code class="language-plaintext highlighter-rouge">squish()</code> -&gt; <code class="language-plaintext highlighter-rouge">squash()</code>.</p>
+
+<p>Let’s recompute the new sha256.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sha256sum </span>banana.jar
+9278282827ddb55c68eb370 banana.jar
+
+<span class="nv">$ </span><span class="nb">sha256sum </span>banana-interface.jar
+e18e0ae82bdc4deb04f04aa  banana-interface.jar
+</code></pre></div></div>
+
+<p>🤯 Although the hash of <em>banana.jar</em> had changed, we still get <em>e18e0ae82bdc4deb04f04aa</em> for the ijar.</p>
+
+<p>We now the equivalent of a header file for Java code.  🙌</p>
+
+<p>Bazel will use the <code class="language-plaintext highlighter-rouge">ijar</code> when computing the Action Key hash in lieu of the JAR for the dependencies you may depend on; thus avoiding costly rebuilds when only private information changes within your dependency.</p>
+
+<p>This is the amazing lesser known tool that makes Bazel super-powered 🦸 for JVM languages.</p>
+              </div>
+            </article>
+        <hr class="entry_sep">
+          <article>
+            <h2 class="entry_header">
+              <a href="https://fzakaria.com/2024/10/23/bazel-knowledge-mind-your-path.html">
+                Bazel Knowledge: mind your PATH
+                </a>
+            </h2>
+            <div class="entry_meta">
+              <date>
+                <span>23.10.2024 22:37</span>
+                </date>
+              </div>
+
+            <div class="entry_content">
+                <p>Have you encountered the following?</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> bazel build
+INFO: Invocation ID: f16c3f83-0150-494e-bd34-1a9cfb6a2e67
+WARNING: Build option <span class="nt">--incompatible_strict_action_env</span> has changed, discarding analysis cache <span class="o">(</span>this can be expensive, see https://bazel.build/advanced/performance/iteration-speed<span class="o">)</span><span class="nb">.</span>
+INFO: Analyzed target @@com_google_protobuf//:protoc <span class="o">(</span>113 packages loaded, 1377 targets configured<span class="o">)</span><span class="nb">.</span>
+<span class="o">[</span>483 / 845] 13 actions, 12 running
+    Compiling src/google/protobuf/compiler/importer.cc<span class="p">;</span> 3s disk-cache, darwin-sandbox
+    Compiling src/google/protobuf/compiler/java/names.cc<span class="p">;</span> 1s disk-cache, darwin-sandbox
+    Compiling src/google/protobuf/compiler/java/name_resolver.cc<span class="p">;</span> 1s disk-cache, darwin-sandbox
+    Compiling src/google/protobuf/compiler/java/helpers.cc<span class="p">;</span> 1s disk-cache, darwin-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/enum.cc<span class="p">;</span> 1s disk-cache, darwin-sandbox
+    Compiling absl/strings/cord.cc<span class="p">;</span> 1s disk-cache, darwin-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/names.cc<span class="p">;</span> 0s disk-cache, darwin-sandbox
+    Compiling absl/time/internal/cctz/src/time_zone_lookup.cc<span class="p">;</span> 0s disk-cache, darwin-sandbox ...
+</code></pre></div></div>
+
+<p>I finally had it with Bazel <strong>recompiling protoc</strong> 😤</p>
+
+<p>The working title for this post: <em>Why the #$@! does protoc keep recompiling!</em> 🤬</p>
+
+<blockquote>
+  <p>If you are not interested in the story and just want to avoid recompiling <em>protoc</em>, try putting <code class="language-plaintext highlighter-rouge">build --incompatible_strict_action_env</code> in your <em>.bazelrc</em>.</p>
+
+  <p>Checkout Aspect’s <a href="https://docs.aspect.build/guides/bazelrc/">bazelrc guide</a> for other good tidbits.</p>
+</blockquote>
+
+<!--more-->
+
+<p>Admittedly, I’ve been using Bazel a while and I wasn’t sure why I kept having to rebuild <em>protoc</em> despite nothing seemingly changing on my system.</p>
+
+<p>Worse, my coworkers who I’ve been working hard to champion Bazel were starting to notice.</p>
+
+<p><em>“You explained that Bazel is supposed to be hermetic and have great caching. Why am I recompiling protoc?”</em></p>
+
+<p>This seems to be a bit of an issue within the Bazel community so much so, that one recommended approach is just <em>use precompiled binaries</em> via <a href="https://github.com/aspect-build/toolchains_protoc">aspect-build/toolchains_protoc</a>. 🤦</p>
+
+<blockquote>
+  <p><em>Aside</em>: Using prebuilt binaries not only hinders my own personal adoption of Bazel on <a href="https://nixos.org">NixOS</a> but devalues the value proposition of Bazel itself.</p>
+</blockquote>
+
+<p>Turns out there is a long-standing <strong>5 year old</strong> issue <a href="https://github.com/bazelbuild/bazel/issues/7095">issues#7095</a> that provided some clues; specifically changing <code class="language-plaintext highlighter-rouge">PATH</code> is busting the action key.</p>
+
+<p>I want to validate this assumption, by following the guide on <a href="https://bazel.build/remote/cache-remote">how to debug remote cache hits</a>.</p>
+
+<p>I ran Bazel twice, once with a different <code class="language-plaintext highlighter-rouge">PATH</code> and stored the compact execution log.
+I then convert it to textual form and diff them.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># build protoc normally</span>
+<span class="o">&gt;</span> bazel build @com_google_protobuf//:protoc <span class="se">\</span>
+    <span class="nt">--execution_log_compact_file</span><span class="o">=</span>/tmp/exec1.log
+
+<span class="c"># muck up the PATH</span>
+<span class="o">&gt;</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/bin4/ bazel build @com_google_protobuf//:protoc <span class="se">\</span>
+    <span class="nt">--execution_log_compact_file</span><span class="o">=</span>/tmp/exec2.log
+
+<span class="o">&gt;</span> bazel-bin/src/tools/execlog/parser <span class="se">\</span>
+  <span class="nt">--log_path</span><span class="o">=</span>/tmp/exec1.log <span class="se">\</span>
+  <span class="nt">--log_path</span><span class="o">=</span>/tmp/exec2.log <span class="se">\</span>
+  <span class="nt">--output_path</span><span class="o">=</span>/tmp/exec1.log.txt <span class="se">\</span>
+  <span class="nt">--output_path</span><span class="o">=</span>/tmp/exec2.log.txt
+
+<span class="o">&gt;</span> diff /tmp/exec1.log.txt /tmp/exec2.log.txt | <span class="nb">head</span> <span class="nt">-n</span> 30
+<span class="c"># omitted for brevity</span>
+</code></pre></div></div>
+
+<p>Sure enough; there is an <code class="language-plaintext highlighter-rouge">action_env</code> with the <code class="language-plaintext highlighter-rouge">PATH</code> variable and it’s different, causing the action digest to change.</p>
+
+<p>But, why! 🤔</p>
+
+<p>Some of the actions used in the C++ toolchain use the shell’s default environment.
+For instance, Bazel doesn’t include a C++ toolchain by default so it has to find a C++ compiler by searching
+on the <code class="language-plaintext highlighter-rouge">PATH</code> itself.</p>
+
+<p>We can test this (thanks to <a href="https://github.com/keith">keith</a> for this) with a small demo.
+We can see what envs are in actions by default passing <code class="language-plaintext highlighter-rouge">-s</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">_impl</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">declare_file</span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="n">label</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">ctx</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">run_shell</span><span class="p">(</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">[</span><span class="nb">file</span><span class="p">],</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="s">"touch {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">file</span><span class="p">.</span><span class="n">path</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">DefaultInfo</span><span class="p">(</span><span class="n">files</span> <span class="o">=</span> <span class="n">depset</span><span class="p">([</span><span class="nb">file</span><span class="p">]))</span>
+
+<span class="n">foo</span> <span class="o">=</span> <span class="n">rule</span><span class="p">(</span>
+    <span class="n">implementation</span> <span class="o">=</span> <span class="n">_impl</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>Will produce:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SUBCOMMAND: <span class="c"># //:bar [action 'Action bar', configuration: 815f76489fb61a0245ff1941974c20af0ca4e7f91caa00c80538d4493d650289, execution platform: @@platforms//host:host, mnemonic: Action]</span>
+<span class="o">(</span><span class="nb">cd</span> /home/ubuntu/.cache/bazel/_bazel_ubuntu/1275a810ad76d4d1cc60319d4aaf0d39/execroot/_main <span class="o">&amp;&amp;</span> <span class="se">\</span>
+  <span class="nb">exec env</span> - <span class="se">\</span>
+  /bin/bash <span class="nt">-c</span> <span class="s1">'touch bazel-out/aarch64-fastbuild/bin/bar'</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>If we change the <code class="language-plaintext highlighter-rouge">run_shell</code> action to use <code class="language-plaintext highlighter-rouge">use_default_shell_env=True</code> we then get.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SUBCOMMAND: <span class="c"># //:bar [action 'Action bar', configuration: 815f76489fb61a0245ff1941974c20af0ca4e7f91caa00c80538d4493d650289, execution platform: @@platforms//host:host, mnemonic: Action]</span>
+<span class="o">(</span><span class="nb">cd</span> /home/ubuntu/.cache/bazel/_bazel_ubuntu/1275a810ad76d4d1cc60319d4aaf0d39/execroot/_main <span class="o">&amp;&amp;</span> <span class="se">\</span>
+  <span class="nb">exec env</span> - <span class="se">\</span>
+    <span class="nv">PATH</span><span class="o">=</span>&lt;OMITTED FOR BREVITY&gt; <span class="se">\</span>
+  /bin/bash <span class="nt">-c</span> <span class="s1">'touch bazel-out/aarch64-fastbuild/bin/bar'</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Okay, so how do we solve this?</p>
+
+<p>There are two ways to solve this.</p>
+
+<p>First, you can try <code class="language-plaintext highlighter-rouge">--incompatible_strict_action_env</code> in your <em>.bazerc</em> file.
+If this flag is set, Bazel will force set <code class="language-plaintext highlighter-rouge">PATH</code> to be a static value. If your C++ compiler is either a hermetic toolchain or found in the default lists set; you are good to go!</p>
+
+<p>If you tried the first option but your build is failing, you’ll have to manually force set the <code class="language-plaintext highlighter-rouge">PATH</code> via the <code class="language-plaintext highlighter-rouge">action_env</code> flag such as <code class="language-plaintext highlighter-rouge">--action_env=PATH=/usr/bin:/something/custom</code></p>
+
+<p>Hopefully these settings get you from recompiling <em>protoc</em> and reach Bazel nirvana.</p>
+
+<p>I highly recommend <a href="https://docs.aspect.build/guides/bazelrc/">Aspect’s bazelrc guide</a> for other no-nonsense settings that should likely just be the default 🙄</p>
+              </div>
+            </article>
+        <hr class="entry_sep">
+          <article>
+            <h2 class="entry_header">
+              <a href="https://fzakaria.com/2024/10/13/bazel-knowledge-aspects-to-generate-java-classpath.html">
+                Bazel Knowledge: Aspects to generate Java CLASSPATH
+                </a>
+            </h2>
+            <div class="entry_meta">
+              <date>
+                <span>13.10.2024 18:10</span>
+                </date>
+              </div>
+
+            <div class="entry_content">
+                <p>One of the more advanced features of <a href="https://bazel.build">Bazel</a> is the concept of <a href="https://bazel.build/extending/aspects">aspect</a>.</p>
+
+<p>For a very brief primer on why you may want an aspect is that Bazel let’s you audit and analyze the BUILD graph without performing any actual builds. It does this by constructing a “shadow graph” that your aspect can perform analysis on. This can be useful for a variety things such as IDE integration.</p>
+
+<p>I wanted to ask a very simple question to make integration with Visual Studio Code straightforward:</p>
+
+<p><em>“What’s the CLASSPATH I need for a particular target so that I don’t get red squigglies?”</em></p>
+
+<!--more-->
+
+<p>Sometimes simple questions involve some of the more advanced features of Bazel.
+I wanted to generate a file that I can feed into any IDE, such as Visual Studio Code, and get semi-decent language integration.</p>
+
+<p>My end goal:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="w"> </span>bazel build //:generate_classpath
+<span class="go">
+</span><span class="gp">&gt;</span><span class="w"> </span><span class="nb">cat </span>bazel-bin/classpath.txt
+<span class="go">bazel-out/k8-fastbuild/bin/java/lib/liblib.jar
+bazel-out/k8-fastbuild/bin/java/lib2/liblib2.jar
+</span></code></pre></div></div>
+
+<p>First thing we want to do is generate an aspect that will collect recursively all the compile time Jars.</p>
+
+<p>We define our aspect which requires the sole <code class="language-plaintext highlighter-rouge">deps</code> attribute to be propagated.
+We then make sure we recursively merge all the results of the prior aspect invocations into the final
+<code class="language-plaintext highlighter-rouge">ClassPathInfo</code> provider object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ClassPathInfo</span> <span class="o">=</span> <span class="n">provider</span><span class="p">(</span>
+    <span class="s">"Provider for classpath information"</span><span class="p">,</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'compile_jars'</span> <span class="p">:</span> <span class="s">'depset of compile jars'</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_classpath_aspect_impl</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+    <span class="c1"># Make sure the rule has a deps attribute.
+</span>    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="n">rule</span><span class="p">.</span><span class="n">attr</span><span class="p">,</span> <span class="s">'deps'</span><span class="p">):</span>
+        <span class="n">target_compile_jars</span> <span class="o">=</span> <span class="n">target</span><span class="p">[</span><span class="n">JavaInfo</span><span class="p">].</span><span class="n">full_compile_jars</span>
+        <span class="n">dep_compile_jars</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">dep</span><span class="p">[</span><span class="n">ClassPathInfo</span><span class="p">].</span><span class="n">compile_jars</span>
+            <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">ctx</span><span class="p">.</span><span class="n">rule</span><span class="p">.</span><span class="n">attr</span><span class="p">.</span><span class="n">deps</span>
+        <span class="p">]</span>
+        <span class="n">all_compile_jars</span> <span class="o">=</span> <span class="p">[</span><span class="n">target_compile_jars</span><span class="p">]</span> <span class="o">+</span> <span class="n">dep_compile_jars</span>
+        <span class="n">merged_depset</span> <span class="o">=</span> <span class="n">depset</span><span class="p">(</span><span class="n">transitive</span><span class="o">=</span><span class="n">all_compile_jars</span><span class="p">)</span>
+
+        <span class="n">classpath_strings</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">jar</span> <span class="ow">in</span> <span class="n">merged_depset</span><span class="p">.</span><span class="n">to_list</span><span class="p">():</span>
+            <span class="n">classpath_strings</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">jar</span><span class="p">.</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">output_file</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">declare_file</span><span class="p">(</span><span class="s">"classpath.txt"</span><span class="p">)</span>
+        <span class="n">ctx</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">write</span><span class="p">(</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">output_file</span><span class="p">,</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">classpath_strings</span><span class="p">),</span>
+            <span class="n">is_executable</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">ClassPathInfo</span><span class="p">(</span>
+            <span class="n">compile_jars</span> <span class="o">=</span> <span class="n">merged_depset</span>
+            <span class="p">),</span>
+            <span class="n">OutputGroupInfo</span><span class="p">(</span>
+                <span class="n">compile_jars</span> <span class="o">=</span> <span class="n">depset</span><span class="p">([</span><span class="n">output_file</span><span class="p">])</span>
+            <span class="p">)]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">ClassPathInfo</span><span class="p">(</span><span class="n">compile_jars</span> <span class="o">=</span> <span class="n">depset</span><span class="p">())]</span>
+
+<span class="n">classpath_aspect</span> <span class="o">=</span> <span class="n">aspect</span><span class="p">(</span>
+    <span class="n">implementation</span> <span class="o">=</span> <span class="n">_classpath_aspect_impl</span><span class="p">,</span>
+    <span class="c1"># attr_aspects is a list of rule attributes along
+</span>    <span class="c1"># which the aspect propagates.
+</span>    <span class="n">attr_aspects</span> <span class="o">=</span> <span class="p">[</span><span class="s">'deps'</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>A <em>less documented</em> feature of Bazel is the “output groups” which you can see here we are
+by specifying <code class="language-plaintext highlighter-rouge">OuputGroupInfo</code>. The idea here is that we can now specify our apect for any
+label by using this command line invocation:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="w"> </span>bazel build //java/app <span class="nt">--aspects</span> defs.bzl%classpath_aspect <span class="se">\</span>
+<span class="go">        --output_groups=compile_jars
+
+INFO: Analyzed target //java/app:app (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Aspect //:defs.bzl%classpath_aspect of //java/app:app up-to-date:
+  bazel-bin/java/app/classpath.txt
+
+</span><span class="gp">&gt;</span><span class="w">  </span><span class="nb">cat </span>bazel-bin/java/app/classpath.txt
+<span class="go">bazel-out/k8-fastbuild/bin/java/lib/liblib.jar
+bazel-out/k8-fastbuild/bin/java/lib2/liblib2.jar⏎
+</span></code></pre></div></div>
+
+<p>That’s not all though! We can also create a rule that defines the labels provided must be of the type aspect.
+This let’s us encode the build targets in our <code class="language-plaintext highlighter-rouge">BUILD</code> files themselves.</p>
+
+<p>The rule itself is straightforward. For each label provided, it goes through the
+items in the <code class="language-plaintext highlighter-rouge">compile_jars</code> depset and creates an output file which is the
+concatenated new-line delimited list.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">_generate_classpath_rule_impl</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="n">ctx</span><span class="p">.</span><span class="n">attr</span><span class="p">.</span><span class="n">deps</span><span class="p">:</span>
+        <span class="n">classpath_strings</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">jar</span> <span class="ow">in</span> <span class="n">dep</span><span class="p">[</span><span class="n">ClassPathInfo</span><span class="p">].</span><span class="n">compile_jars</span><span class="p">.</span><span class="n">to_list</span><span class="p">():</span>
+            <span class="n">classpath_strings</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">jar</span><span class="p">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">output_file</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">declare_file</span><span class="p">(</span><span class="s">"classpath.txt"</span><span class="p">)</span>
+        <span class="n">ctx</span><span class="p">.</span><span class="n">actions</span><span class="p">.</span><span class="n">write</span><span class="p">(</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">output_file</span><span class="p">,</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">classpath_strings</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">DefaultInfo</span><span class="p">(</span><span class="n">files</span> <span class="o">=</span> <span class="n">depset</span><span class="p">([</span><span class="n">output_file</span><span class="p">]))]</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">DefaultInfo</span><span class="p">(</span><span class="n">files</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)]</span>
+
+<span class="n">generate_classpath_rule</span> <span class="o">=</span> <span class="n">rule</span><span class="p">(</span>
+    <span class="n">implementation</span> <span class="o">=</span> <span class="n">_generate_classpath_rule_impl</span><span class="p">,</span>
+    <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'deps'</span> <span class="p">:</span> <span class="n">attr</span><span class="p">.</span><span class="n">label_list</span><span class="p">(</span><span class="n">aspects</span> <span class="o">=</span> <span class="p">[</span><span class="n">classpath_aspect</span><span class="p">]),</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>❗ There is a bit of duplication in the rule for generating the output file. We could have also
+used the OutputGroupInfo and merged all the files together.</p>
+</blockquote>
+
+<p>In order to invoke this rule you define it in a <code class="language-plaintext highlighter-rouge">BUILD</code> file and give it the top-level
+applications that you are working on.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">generate_classpath_rule</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"generate_classpath"</span><span class="p">,</span>
+    <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s">"//java/app:app"</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>🎉 We now have <strong>two</strong> pretty simple ways to generate the compile-time CLASSPATH for a label.
+This can make integrations with IDEs a bit more straightforward if they don’t have a working Bazel plugin.</p>
+              </div>
+            </article>
         </main>
 
       <aside>
         <img src="logo.svg">
-        <p>Last updated: 2025-01-12 11:17</p>
+        <p>Last updated: 2025-01-12 20:14</p>
         <ul>
-          
-            <li>
-              <a href="https://marcus.means.no/https://marcus.means.no/">
-                @’s marcus - marcus
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://tazjin/feed.atom">
-                tazjin's interblag
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://blog.ericv.me/atom.xml">
-                Eric V's Blog
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://fzakaria.com/feed.xml">
-                Farid Zakaria’s Blog
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://tech.j4m3s.eu/">
-                j4m3s' tech blog
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://ghuntley.com/">
-                Geoffrey Huntley
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://flokli.de/posts/">
-                Posts on flokli
-                </a>
-            </li>
-          
-            <li>
-              <a href="https://elis.nu/blog/">
-                ~elis/blog/ on Elis Hirwing
-                </a>
-            </li>
           
             <li>
               <a href="https://andreas.rammhold.de/">
                 Andreas Rammhold
                 </a>
-            </li>
-          
-            <li>
-              <a href="https://leahneukirchen.org/blog">
-                leah blogs
-                </a>
+              (<a href="https://andreas.rammhold.de/index.xml">feed</a>)
             </li>
           
             <li>
               <a href="https://blog.benjojo.co.uk/">
                 benjojo blog
                 </a>
+              (<a href="https://blog.benjojo.co.uk/rss.xml">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://blog.ericv.me/atom.xml">
+                Eric V's Blog
+                </a>
+              (<a href="https://blog.ericv.me/atom.xml">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://blog.koch.ro/feed.xml">
+                Thomas Koch
+                </a>
+              (<a href="https://blog.koch.ro/feed.xml">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://elis.nu/blog/">
+                ~elis/blog/ on Elis Hirwing
+                </a>
+              (<a href="https://elis.nu/blog/index.xml">feed</a>)
             </li>
           
             <li>
               <a href="https://eta.st/">
                 eta.st
                 </a>
+              (<a href="https://eta.st/feed.xml">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://flokli.de/posts/">
+                Posts on flokli
+                </a>
+              (<a href="https://flokli.de/posts/index.rss">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://fzakaria.com/feed.xml">
+                Farid Zakaria’s Blog
+                </a>
+              (<a href="https://fzakaria.com/feed.xml">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://ghuntley.com/">
+                Geoffrey Huntley
+                </a>
+              (<a href="https://ghuntley.com/rss/">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://leahneukirchen.org/blog">
+                leah blogs
+                </a>
+              (<a href="https://leahneukirchen.org/blog/index.atom">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://marcus.means.no/https://marcus.means.no/">
+                @’s marcus - marcus
+                </a>
+              (<a href="https://marcus.means.no/index.xml">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://tazjin/feed.atom">
+                tazjin's interblag
+                </a>
+              (<a href="https://tazj.in/feed.atom">feed</a>)
+            </li>
+          
+            <li>
+              <a href="https://tech.j4m3s.eu/">
+                j4m3s' tech blog
+                </a>
+              (<a href="https://tech.j4m3s.eu/index.xml">feed</a>)
             </li>
           
             <li>
               <a href="https://tvl.fyi/feed.atom">
                 TVL blog
                 </a>
+              (<a href="https://tvl.fyi/feed.atom">feed</a>)
             </li>
           
         </ul>
       </aside>
     </div>
+  </div>
   </body>
 </html>
