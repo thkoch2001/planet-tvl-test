@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Planet TVL</title>
-  <link href="https::/planet.tvl.fyi"/>
-  <updated>2025-01-12T20:14:37Z</updated>
+  <link href="https://planet.tvl.fyi"/>
+  <updated>2025-01-12T20:49:55Z</updated>
   <id>https::/planet.tvl.fyi</id>
   <generator uri="https:&#x2F;&#x2F;github.com&#x2F;thkoch2001&#x2F;planet-mars" version="0.1.0">
     planet-mars by Thomas Koch &lt;thomas@koch.ro&gt;
